@@ -2,8 +2,8 @@
 name: İlkay Narlı
 job_title: Senior Software Developer
 email: ilkaynarli@gmail.com
-description: I build great products at Google, currently Google Maps. I also enjoy capturing moments with my camera and discovering new music. Follow me Twitter or drop me a line.
-avatar: assets/img/inarli.jpg
+description: I am software developing since 2007.
+avatar: /assets/img/inarli.jpg
 favicon: /favicon.ico
 twitter_handler: inarli
 analytics_code: UA-XXXXXXX-2
@@ -16,7 +16,7 @@ social_networks:
 -  { name: instagram, url: '' }
 -  { name: google-plus, url: '' }
 -  { name: linkedin, url: 'https://www.linkedin.com/in/inarli/' }
--  { name: skype, url: 'inarli' }
+-  { name: skype, url: 'skype:inarli?call' }
 -  { name: github, url: 'https://www.github.com/inarli' }
 -  { name: codepen, url: '' }
 -  { name: stack-overflow, url: '' }
