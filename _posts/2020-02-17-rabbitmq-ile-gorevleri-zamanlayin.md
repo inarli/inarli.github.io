@@ -4,7 +4,7 @@ date: 2020-02-17 10:03
 title:  "RabbitMQ ile Görevleri Zamanlayın"
 mood: happy
 category: 
-- "Rabbit MQ"
+- Rabbit-MQ
 tags:
 - rabbit mq
 - x delay queue
