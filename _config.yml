@@ -57,7 +57,7 @@ defaults:
 
 # Serving
 url: "http://www.inarli.com"
-baseurl: "http://www.inarli.com"
+baseurl: "http://www.inarli.com/"
 
 # Includes
 include: ["_pages"]
