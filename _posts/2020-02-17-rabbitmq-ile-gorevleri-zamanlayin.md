@@ -5,6 +5,11 @@ title:  "RabbitMQ ile Görevleri Zamanlayın"
 mood: happy
 category: 
 - "Rabbit MQ"
+tags:
+- rabbit mq
+- x delay queue
+- queue
+- php
 ---
 ![Photo by [Hal Gatewood](https://unsplash.com/photos/Nzb4LBsctyQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/queue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/4512/1*kXLNlwyvPbQJDDrlVbSPLw.jpeg)
 
@@ -14,6 +19,7 @@ Nasıl çalıştığını size şöyle anlatabilirim:
 Sitenize üye olan kullanıcılarınıza “Hoşgeldiniz” diyen bir e-posta gönderdiğinizi düşünelim. Eğer bu işlemi kayıt esnasında çalışan bir iş parçası olarak tasarladıysanız, kullanıcınız uygulamanızın e-postayı göndermek için çalıştığı süre kadar bekleyecek. Fakat işlemi kuyruğa alırsanız kullanıcınız kayıt olup işlemlerine devam ederken, RabbitMQ e-posta gönderme işlemini uygulamanızın kulağına sessizce fısıldayacak.
 
 Bu sayede bazı kazanımlar elde edeceksiniz;
+<!--more-->
 
 * Kullanıcınız daha az beklediği için daha kaliteli bir deneyim sağlayacak.
 * Uygulamanız işlemi anlık bir şekilde yapmak için kaynak sarfetmeyecek ve daha çok isteğe cevap verebilecek.
