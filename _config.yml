@@ -56,8 +56,8 @@ defaults:
       comments: "true"
 
 # Serving
-url: ""
-baseurl: ""
+url: "http://www.inarli.com"
+baseurl: "http://www.inarli.com"
 
 # Includes
 include: ["_pages"]
