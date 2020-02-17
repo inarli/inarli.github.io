@@ -7,7 +7,7 @@ avatar: /assets/img/inarli.jpg
 favicon: /favicon.ico
 twitter_handler: inarli
 analytics_code: UA-XXXXXXX-2
-disqus: https://inarli.disqus.com
+disqus: inarli.disqus.com
 
 # Social Accounts
 social_networks:
