@@ -16,9 +16,7 @@ Sitenize üye olan kullanıcılarınıza “Hoşgeldiniz” diyen bir e-posta g�
 Bu sayede bazı kazanımlar elde edeceksiniz;
 
 * Kullanıcınız daha az beklediği için daha kaliteli bir deneyim sağlayacak.
-
 * Uygulamanız işlemi anlık bir şekilde yapmak için kaynak sarfetmeyecek ve daha çok isteğe cevap verebilecek.
-
 * E-posta gönderiminden kaynaklanabilecek olası bir hata durumunda uygulamanızın akışı doğrudan etkilenmeyecek.
 
 ### Peki biz Zingat’ta neden mesajları sırayla değil de zamanlayarak göndermek istedik?
@@ -68,7 +66,33 @@ Hepsi bu kadar.
 Artık tek yapmamız gereken uygulama içinde mesajlarımızı zamanlanmış kuyruğa gönderirken *x-delay* adında bir header parametresine milisaniye cinsinden değer eklemek.
 
 Biz PHP tabanlı projemizde RabbitMQ istemcisi olarak [php-amqplib/php-amqplib](https://github.com/php-amqplib/php-amqplib) paketini kullanıyoruz, bu paketi kullanarak zamanlanmış bir mesaj göndermek isteseydik şöyle bir kod yazmamız gerekecekti.
+```php
+<?php
 
- <iframe src="https://medium.com/media/a91f356a8322c8daf788ecec86754657" frameborder=0></iframe>
+public function scheduledPublish()
+    {
+        $headers = new AMQPTable();
+        $delay = 60000; // 1 minute
+        $headers->set('x-delay', $delay, AMQPTable::T_INT_LONG);
+        $exchangeName = 'delayed';
+        $routingKey = 'delayed-messages';
+        $properties = [
+            'content_type' => 'text/plain',
+            'delivery_mode' => 2
+        ];
+        $payload = [
+            'message' => 'A scheduled RabbitMQ message'
+        ];
+        $msg = new AMQPMessage(json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE), $properties);
+        $msg->set('application_headers', $headers);
+        try {
+            $this->channel->basic_publish($msg, $exchangeName, $routingKey, true);
+            $this->channel->wait_for_pending_acks();
+        } catch (\Exception $e) {
+            return false;
+        }
+        return true;
+    }
+```
 
 Okuduğunuz için teşekkür ederim.
