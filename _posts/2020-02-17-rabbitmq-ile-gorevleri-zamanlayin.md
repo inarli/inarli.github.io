@@ -11,7 +11,8 @@ tags:
 - queue
 - php
 ---
-![Photo by [Hal Gatewood](https://unsplash.com/photos/Nzb4LBsctyQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/queue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/4512/1*kXLNlwyvPbQJDDrlVbSPLw.jpeg)
+![Photo by Hal Gatewood on Unsplash](https://cdn-images-1.medium.com/max/4512/1*kXLNlwyvPbQJDDrlVbSPLw.jpeg)
+
 
 [RabbitMQ](https://www.rabbitmq.com), uygulamanıza yapmak istediğiniz işleri sıraya alarak, asenkron bir şekilde çalışmanıza yardımcı olan ve kaynak kodu herkese açık bir mesaj kuyruklama aracıdır.
 
@@ -74,7 +75,6 @@ Artık tek yapmamız gereken uygulama içinde mesajlarımızı zamanlanmış kuy
 Biz PHP tabanlı projemizde RabbitMQ istemcisi olarak [php-amqplib/php-amqplib](https://github.com/php-amqplib/php-amqplib) paketini kullanıyoruz, bu paketi kullanarak zamanlanmış bir mesaj göndermek isteseydik şöyle bir kod yazmamız gerekecekti.
 {% highlight php linenos %}
 <?php
-
 public function scheduledPublish()
     {
         $headers = new AMQPTable();
