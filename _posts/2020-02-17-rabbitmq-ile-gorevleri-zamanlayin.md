@@ -4,7 +4,7 @@ date: 2020-02-17 10:03
 title:  "RabbitMQ ile Görevleri Zamanlayın"
 mood: happy
 category: 
-- Rabbit MQ
+- "Rabbit MQ"
 ---
 ![Photo by [Hal Gatewood](https://unsplash.com/photos/Nzb4LBsctyQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/queue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/4512/1*kXLNlwyvPbQJDDrlVbSPLw.jpeg)
 
@@ -66,7 +66,7 @@ Hepsi bu kadar.
 Artık tek yapmamız gereken uygulama içinde mesajlarımızı zamanlanmış kuyruğa gönderirken *x-delay* adında bir header parametresine milisaniye cinsinden değer eklemek.
 
 Biz PHP tabanlı projemizde RabbitMQ istemcisi olarak [php-amqplib/php-amqplib](https://github.com/php-amqplib/php-amqplib) paketini kullanıyoruz, bu paketi kullanarak zamanlanmış bir mesaj göndermek isteseydik şöyle bir kod yazmamız gerekecekti.
-```php
+{% highlight php linenos %}
 <?php
 
 public function scheduledPublish()
@@ -93,6 +93,6 @@ public function scheduledPublish()
         }
         return true;
     }
-```
+{% endhighlight %}
 
 Okuduğunuz için teşekkür ederim.
