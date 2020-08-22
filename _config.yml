@@ -56,7 +56,7 @@ defaults:
       comments: "true"
 
 # Serving
-url: "http://www.inarli.com"
+url: "https://www.inarli.com"
 baseurl: ""
 
 # Includes
