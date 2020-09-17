@@ -11,7 +11,7 @@ tags:
 - pasta app
 - Intelligent Translator app
 ---
-![Photo by Eugen on Unsplash](https://github.com/inarli/inarli.github.io/blob/master/assets/img/eugen-str-CrhsIRY3JWY-unsplash%20(1).jpg)
+![Photo by Eugen on Unsplash](https://github.com/inarli/inarli.github.io/blob/master/assets/img/eugen-str-CrhsIRY3JWY-unsplash-mid.jpg)
 
 Bir geliştirici olarak ihtiyaç anında elimin altında uygun aracın bulunmasından çok keyif alırım. Bu sebeple araç çantamda epey birşeyler var. Belki bu yazıyı okuyanlara da tanışmalarına vesile olabilirim diye paylaşmaya karar verdim. *Baştan belirtmeliyim ki bahsedeceğim uygulamalar macOS ortamında çalışıyorlar, belki windows veya linux sürümleri de vardır hatta belki de daha güzel alternatifleri bile olabilir, bir bakmakta fayda var.*
 
