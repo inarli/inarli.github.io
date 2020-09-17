@@ -14,7 +14,9 @@ tags:
 ![Photo by Eugen on Unsplash](https://github.com/inarli/inarli.github.io/blob/master/assets/img/eugen-str-CrhsIRY3JWY-unsplash%20(1).jpg)
 
 Bir geliştirici olarak ihtiyaç anında elimin altında uygun aracın bulunmasından çok keyif alırım. Bu sebeple araç çantamda epey birşeyler var. Belki bu yazıyı okuyanlara da tanışmalarına vesile olabilirim diye paylaşmaya karar verdim. *Baştan belirtmeliyim ki bahsedeceğim uygulamalar macOS ortamında çalışıyorlar, belki windows veya linux sürümleri de vardır hatta belki de daha güzel alternatifleri bile olabilir, bir bakmakta fayda var.*
+
 <!--more-->
+
 **Intelligent Translator**
 
 Mesleğimiz gereği nette okuduklarımızda bilmediğimiz ingilizce kelimelerin olması neredeyse kaçınılmaz. Neyse ki Google Translate Chrome eklentisi sayfadaki herhangi bir kelimenin çevirisini göstermek konusunda gayet yeterli. Peki ya tarayıcıda değilsek? İşte burada imdadımıza [Intelligent Translator](https://apps.apple.com/us/app/intelligent-translator/id1217010477?mt=12) uygulaması yetişiyor. Status bar üzerindeki minik ikonuna tıkladığınızda size çevirmek istediğiniz metni girmeniz için bir alan sunuyor ve birkaç saniye içinde birçok dildeki karşılığını verebiliyor. Ücretli ve ücretsiz sürümleri var. Ücretsiz versiyonunda çeviri anında fazladan bir süre daha bekleterek ücretsiz almanız için sizi sınıyor fakat acelesi olmayanlar için ücretsiz versiyonu da gayet yeterli diyebilirim zira uzun bir süre ücretsiz versiyonuyla idare etmiştim. Ücretli versiyonuna sahip olmak isterseniz de yıllık 35,99 TL ödeyerek hem geliştiriciye de destek olabilirsiniz. *(Geliştiricilere destek konusunda biraz hassasımdır)*
