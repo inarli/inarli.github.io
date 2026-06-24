@@ -3,7 +3,6 @@ layout: post
 date: 2026-06-24 18:28
 title:  "Task Roulette Privacy Policy"
 mood: happy
-hidden: true
 category: 
 - IOS app
 tags:
