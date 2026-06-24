@@ -1,15 +1,7 @@
 ---
-layout: post
-date: 2026-06-24 18:28
-title:  "Task Roulette Privacy Policy"
-mood: happy
-category: 
-- IOS app
-tags:
-- rabbit mq
-- x delay queue
-- queue
-- php
+layout: page
+title: "Task Roulette Privacy Policy"
+permalink: /task-roulette-privacy/
 ---
 **Privacy Policy**
 
