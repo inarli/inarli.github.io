@@ -29,6 +29,8 @@ permalink: /taskroulette/
 <meta name="twitter:description" content="Can't decide which task to start? Spin the wheel and let it decide. iOS task app with confetti, widget and themes.">
 <meta name="twitter:image" content="https://www.inarli.com/assets/img/taskroulette-og.png">
 <link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/assets/img/taskroulette-icon.svg">
+<link rel="apple-touch-icon" href="/assets/img/taskroulette-touch-icon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -117,11 +119,7 @@ permalink: /taskroulette/
   }
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
-  .brand-icon {
-    width: 34px; height: 34px; border-radius: 9px;
-    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
-    display: grid; place-items: center; color: #fff; font-size: 1.1rem;
-  }
+  .brand-icon { width: 34px; height: 34px; border-radius: 9px; display: block; }
   .lang-toggle {
     display: flex; gap: 2px; background: #e9e7f7; border-radius: 999px; padding: 3px;
   }
@@ -258,7 +256,7 @@ permalink: /taskroulette/
 <header>
   <div class="wrap nav">
     <a class="brand" href="#">
-      <span class="brand-icon">🎯</span>
+      <img class="brand-icon" src="/assets/img/taskroulette-icon.svg" alt="Task Roulette logosu" width="34" height="34">
       Task Roulette
     </a>
     <div class="lang-toggle" role="group" aria-label="Language">

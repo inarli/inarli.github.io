@@ -1,0 +1,68 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C6FFF"/>
+      <stop offset="100%" stop-color="#3D2FC4"/>
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <clipPath id="iconClip">
+      <rect width="1024" height="1024" rx="232"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#iconClip)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <rect width="1024" height="1024" fill="url(#innerGlow)"/>
+
+    <!-- Decorative dots -->
+    <circle cx="120" cy="135" r="9" fill="#ffffff" opacity="0.12"/>
+    <circle cx="181" cy="90" r="6" fill="#ffffff" opacity="0.08"/>
+    <circle cx="90" cy="210" r="5" fill="#ffffff" opacity="0.08"/>
+    <circle cx="904" cy="889" r="9" fill="#ffffff" opacity="0.12"/>
+    <circle cx="949" cy="829" r="6" fill="#ffffff" opacity="0.08"/>
+    <circle cx="874" cy="949" r="5" fill="#ffffff" opacity="0.08"/>
+
+    <!-- Outer ring -->
+    <circle cx="512" cy="496" r="346" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="3"/>
+
+    <!-- Main disc -->
+    <circle cx="512" cy="496" r="286" fill="#ffffff" opacity="0.1"/>
+
+    <!-- Top arc -->
+    <path d="M 300 407 A 226 226 0 0 1 724 407"
+          fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round" opacity="0.95"/>
+    <!-- Top arrowhead -->
+    <polygon points="724,361 768,429 685,429" fill="#ffffff" opacity="0.95"/>
+
+    <!-- Bottom arc -->
+    <path d="M 724 588 A 226 226 0 0 1 300 588"
+          fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round" opacity="0.95"/>
+    <!-- Bottom arrowhead -->
+    <polygon points="300,634 256,566 339,566" fill="#ffffff" opacity="0.95"/>
+
+    <!-- Center glow circle -->
+    <circle cx="512" cy="496" r="78" fill="#ffffff" opacity="0.18"/>
+    <!-- Center white circle -->
+    <circle cx="512" cy="496" r="54" fill="#ffffff" opacity="0.9"/>
+
+    <!-- Checkmark -->
+    <polyline points="485,496 505,517 542,472"
+              fill="none" stroke="#5848E8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Difficulty dots -->
+    <circle cx="416" cy="820" r="15" fill="#ffffff" opacity="0.9"/>
+    <circle cx="464" cy="820" r="15" fill="#ffffff" opacity="0.9"/>
+    <circle cx="512" cy="820" r="15" fill="#ffffff" opacity="0.9"/>
+    <circle cx="560" cy="820" r="15" fill="#ffffff" opacity="0.35"/>
+    <circle cx="608" cy="820" r="15" fill="#ffffff" opacity="0.35"/>
+
+    <!-- Label -->
+    <text x="512" y="888"
+          text-anchor="middle"
+          font-family="system-ui, -apple-system, Helvetica, sans-serif"
+          font-size="42" font-weight="700" fill="#ffffff" opacity="0.55" letter-spacing="5">ROULETTE</text>
+  </g>
+</svg>
