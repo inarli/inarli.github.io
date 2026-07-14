@@ -1,0 +1,17 @@
+# İlkay Narlı — inarli.com
+
+> Personal website of İlkay Narlı, a senior software developer building software since 2007. The site hosts his blog and product pages, including the iOS app Task Roulette.
+
+## Task Roulette (iOS app)
+
+Task Roulette is an iOS productivity app that removes decision paralysis. Users add their tasks with difficulty levels (1-5), spin a roulette wheel, and start whatever task it lands on. Completing a task triggers a confetti celebration. Features include a home screen widget, four themes (Midnight, Sunset, Forest, Ocean), instant Turkish/English language switching, and an interactive onboarding tour. Core features are free; extra themes are part of the Pro in-app purchase. Tasks are stored on-device.
+
+- [Task Roulette landing page](https://www.inarli.com/taskroulette/): App overview, features, FAQ (Turkish and English)
+- [Download on the App Store](https://apps.apple.com/app/id6783888710): iPhone, free
+- [Privacy Policy](https://www.inarli.com/task-roulette-privacy/): What data the app collects
+- [Terms and Conditions](https://www.inarli.com/task-roulette-terms-and-conditions/): Usage terms
+
+## Site
+
+- [Home](https://www.inarli.com/): Blog posts and profile
+- Developer: İlkay Narlı — Twitter/X: @inarli, GitHub: inarli

@@ -74,6 +74,10 @@ paginate_path: "/page:num/"
 markdown: kramdown
 excerpt_separator: <!--more-->
 
+# Plugins
+plugins:
+  - jekyll-sitemap
+
 # Assets Settings
 sass:
   sass_dir: assets/partials
