@@ -1,0 +1,433 @@
+---
+layout: null
+permalink: /taskroulette/
+---
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Roulette: Çevir, rulet karar versin | Spin to pick your next task</title>
+<meta name="description" content="Task Roulette: hangi işe başlayacağına karar veremediğinde çarkı çevir, rulet senin yerine seçsin. Konfeti, widget ve temalarıyla iOS görev uygulaması.">
+<meta property="og:title" content="Task Roulette: Spin the wheel, beat procrastination">
+<meta property="og:description" content="Can't decide which task to start? Spin the wheel and let it decide. iOS task app with confetti, widget and themes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.inarli.com/taskroulette/">
+<link rel="icon" href="/favicon.ico">
+<style>
+  :root {
+    --purple-1: #7C6FFF;
+    --purple-2: #3D2FC4;
+    --accent: #5848E8;
+    --ink: #1d1a33;
+    --muted: #6b6885;
+    --bg: #f7f6fd;
+    --card: #ffffff;
+    --radius: 20px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  /* Dil gizleme: sadece aktif olmayan dili sakla, !important ile her specificity'yi ez */
+  html[data-active-lang="tr"] [data-lang="en"],
+  html[data-active-lang="en"] [data-lang="tr"],
+  html:not([data-active-lang]) [data-lang="en"] { display: none !important; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(247,246,253,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+  .brand-icon {
+    width: 34px; height: 34px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    display: grid; place-items: center; color: #fff; font-size: 1.1rem;
+  }
+  .lang-toggle {
+    display: flex; gap: 2px; background: #e9e7f7; border-radius: 999px; padding: 3px;
+  }
+  .lang-toggle button {
+    border: 0; background: transparent; padding: 5px 14px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 600; color: var(--muted); cursor: pointer;
+  }
+  .lang-toggle button.active { background: #fff; color: var(--accent); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+
+  /* Hero */
+  .hero {
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px;
+    align-items: center; padding: 72px 0 88px;
+  }
+  .hero h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.15; letter-spacing: -0.02em; }
+  .hero h1 span { background: linear-gradient(135deg, var(--purple-1), var(--purple-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.lead { margin: 18px 0 30px; font-size: 1.15rem; color: var(--muted); max-width: 34em; }
+  .cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .appstore-badge { display: inline-block; transition: transform 0.15s ease; line-height: 0; }
+  .appstore-badge:hover { transform: translateY(-2px); }
+  .appstore-badge svg { height: 54px; width: auto; }
+  .free-note { font-size: 0.85rem; color: var(--muted); }
+
+  /* Phone mockup with wheel */
+  .phone {
+    justify-self: center;
+    width: 270px; height: 550px; border-radius: 44px;
+    background: linear-gradient(160deg, var(--purple-1), var(--purple-2));
+    box-shadow: 0 30px 80px rgba(61,47,196,0.35), inset 0 0 0 10px rgba(255,255,255,0.08);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+  }
+  .phone::before {
+    content: ""; position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    width: 90px; height: 24px; background: rgba(0,0,0,0.35); border-radius: 999px;
+  }
+  .wheel { width: 190px; height: 190px; position: relative; }
+  .wheel-disc {
+    width: 100%; height: 100%; border-radius: 50%;
+    background: conic-gradient(#ffffff 0 60deg, #d9d4ff 60deg 120deg, #ffffff 120deg 180deg, #d9d4ff 180deg 240deg, #ffffff 240deg 300deg, #d9d4ff 300deg 360deg);
+    box-shadow: 0 0 0 8px rgba(255,255,255,0.25), 0 12px 32px rgba(0,0,0,0.25);
+    animation: spin 7s cubic-bezier(0.2, 0.8, 0.3, 1) infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    55% { transform: rotate(1470deg); }
+    100% { transform: rotate(1470deg); }
+  }
+  .wheel-center {
+    position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
+    background: #fff; display: grid; place-items: center;
+    color: var(--accent); font-size: 1.5rem; font-weight: 800;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .wheel-pointer {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent;
+    border-top: 18px solid #fff; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+  }
+  .phone-task {
+    background: rgba(255,255,255,0.16); border-radius: 14px; padding: 10px 18px;
+    color: #fff; font-size: 0.85rem; font-weight: 600; backdrop-filter: blur(4px);
+  }
+  .phone-dots { display: flex; gap: 8px; }
+  .phone-dots i { width: 10px; height: 10px; border-radius: 50%; background: #fff; opacity: 0.9; }
+  .phone-dots i:nth-child(4), .phone-dots i:nth-child(5) { opacity: 0.35; }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  .section-title { font-size: clamp(1.5rem, 3vw, 2rem); text-align: center; letter-spacing: -0.01em; }
+  .section-sub { text-align: center; color: var(--muted); margin: 10px auto 44px; max-width: 40em; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .feature {
+    background: var(--card); border-radius: var(--radius); padding: 26px;
+    box-shadow: 0 2px 12px rgba(29,26,51,0.06);
+  }
+  .feature .emoji {
+    width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center;
+    font-size: 1.4rem; background: linear-gradient(135deg, #efeaff, #e2ddff); margin-bottom: 14px;
+  }
+  .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .feature p { font-size: 0.92rem; color: var(--muted); }
+
+  /* How it works */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: step; }
+  .step { text-align: center; padding: 10px 16px; }
+  .step .num {
+    width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 14px;
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    color: #fff; font-weight: 800; font-size: 1.1rem; display: grid; place-items: center;
+  }
+  .step h3 { font-size: 1rem; margin-bottom: 6px; }
+  .step p { font-size: 0.92rem; color: var(--muted); }
+
+  /* FAQ */
+  .faq { max-width: 720px; margin: 0 auto; }
+  details {
+    background: var(--card); border-radius: 14px; padding: 18px 22px; margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(29,26,51,0.05);
+  }
+  details summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; font-size: 1.3rem; color: var(--accent); flex-shrink: 0; }
+  details[open] summary::after { content: "−"; }
+  details p { margin-top: 10px; color: var(--muted); font-size: 0.95rem; }
+
+  /* Bottom CTA */
+  .bottom-cta {
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    border-radius: 28px; text-align: center; padding: 56px 32px; color: #fff; margin-bottom: 64px;
+  }
+  .bottom-cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; }
+  .bottom-cta p { opacity: 0.85; margin-bottom: 26px; }
+  .bottom-cta .appstore-badge svg { height: 58px; }
+
+  footer { border-top: 1px solid rgba(0,0,0,0.07); padding: 28px 0 40px; font-size: 0.85rem; color: var(--muted); }
+  .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-joke { margin-top: 14px; text-align: center; font-size: 0.8rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; text-align: center; padding: 48px 0 56px; }
+    .hero p.lead { margin-left: auto; margin-right: auto; }
+    .cta-row { justify-content: center; }
+    .phone { width: 240px; height: 490px; }
+    .features, .steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <span class="brand-icon">🎯</span>
+      Task Roulette
+    </a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" id="btn-tr" onclick="setLang('tr')">TR</button>
+      <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1 data-lang="tr">Karar veremiyor musun?<br><span>Çevir, rulet seçsin.</span></h1>
+      <h1 data-lang="en">Can't decide what to do?<br><span>Spin. Let the wheel pick.</span></h1>
+
+      <p class="lead" data-lang="tr">Task Roulette, yapılacaklar listendeki karar felcini ortadan kaldırır. Görevlerini ekle, çarkı çevir, çıkan işe başla. Bitirince konfeti senin.</p>
+      <p class="lead" data-lang="en">Task Roulette kills decision paralysis. Add your tasks, spin the wheel, start whatever it lands on, and get a confetti burst when you finish.</p>
+
+      <div class="cta-row">
+        <a class="appstore-badge" href="https://apps.apple.com/app/6783888710">
+          <svg data-lang="tr" viewBox="0 0 168 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="App Store'dan indirin">
+            <rect width="168" height="56" rx="12" fill="#000"/>
+            <rect x="0.75" y="0.75" width="166.5" height="54.5" rx="11.25" fill="none" stroke="#a6a6a6" stroke-width="1.5"/>
+            <g transform="translate(13,13) scale(1.25)" fill="#fff">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </g>
+            <text x="52" y="24" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">App Store'dan</text>
+            <text x="52" y="43" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="600">İndirin</text>
+          </svg>
+          <svg data-lang="en" viewBox="0 0 168 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Download on the App Store">
+            <rect width="168" height="56" rx="12" fill="#000"/>
+            <rect x="0.75" y="0.75" width="166.5" height="54.5" rx="11.25" fill="none" stroke="#a6a6a6" stroke-width="1.5"/>
+            <g transform="translate(13,13) scale(1.25)" fill="#fff">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </g>
+            <text x="52" y="24" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Download on the</text>
+            <text x="52" y="43" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="600">App Store</text>
+          </svg>
+        </a>
+        <span class="free-note" data-lang="tr">Ücretsiz • iPhone için</span>
+        <span class="free-note" data-lang="en">Free • for iPhone</span>
+      </div>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="wheel">
+        <div class="wheel-pointer"></div>
+        <div class="wheel-disc"></div>
+        <div class="wheel-center">✓</div>
+      </div>
+      <div class="phone-task" data-lang="tr">🎉 Sıradaki: Raporu bitir</div>
+      <div class="phone-task" data-lang="en">🎉 Up next: Finish the report</div>
+      <div class="phone-dots"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <h2 class="section-title" data-lang="tr">Neden Task Roulette?</h2>
+    <h2 class="section-title" data-lang="en">Why Task Roulette?</h2>
+    <p class="section-sub" data-lang="tr">Listeye bakıp donmak yerine tek dokunuşla işe başla.</p>
+    <p class="section-sub" data-lang="en">Stop staring at your list. Start with a single tap.</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="emoji">🎰</div>
+        <h3 data-lang="tr">Rulet seçsin</h3>
+        <h3 data-lang="en">The wheel decides</h3>
+        <p data-lang="tr">Karar yükünü çarka devret. Slot animasyonuyla sıradaki görevin belli olsun, sen sadece başla.</p>
+        <p data-lang="en">Offload the decision to the wheel. A slot-style spin picks your next task, you just start.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">⚡️</div>
+        <h3 data-lang="tr">Zorluk seviyeleri</h3>
+        <h3 data-lang="en">Difficulty levels</h3>
+        <p data-lang="tr">Görevlerine 1–5 arası zorluk ver; enerjine göre dengeli bir seçim yap.</p>
+        <p data-lang="en">Rate tasks from 1 to 5 so spins match your energy.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🎉</div>
+        <h3 data-lang="tr">Konfeti kutlaması</h3>
+        <h3 data-lang="en">Confetti celebration</h3>
+        <p data-lang="tr">Her tamamlanan görevde küçük bir zafer anı. Motivasyon böyle birikir.</p>
+        <p data-lang="en">Every completed task earns a tiny victory moment. Momentum adds up.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">📱</div>
+        <h3 data-lang="tr">Ana ekran widget'ı</h3>
+        <h3 data-lang="en">Home screen widget</h3>
+        <p data-lang="tr">Uygulamayı açmadan görevlerini ana ekranda gör.</p>
+        <p data-lang="en">See your tasks at a glance without opening the app.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🎨</div>
+        <h3 data-lang="tr">Temalar</h3>
+        <h3 data-lang="en">Themes</h3>
+        <p data-lang="tr">Midnight, Sunset, Forest ve Ocean temalarıyla çarkını kişiselleştir.</p>
+        <p data-lang="en">Make it yours with Midnight, Sunset, Forest and Ocean themes.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🌍</div>
+        <h3 data-lang="tr">Türkçe + İngilizce</h3>
+        <h3 data-lang="en">Turkish + English</h3>
+        <p data-lang="tr">Ayarlardan dili anında değiştir; yeniden başlatma yok.</p>
+        <p data-lang="en">Switch language instantly in Settings, no restart needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <h2 class="section-title" data-lang="tr">Nasıl çalışır?</h2>
+    <h2 class="section-title" data-lang="en">How it works</h2>
+    <p class="section-sub" data-lang="tr">Üç adım, sıfır bahane.</p>
+    <p class="section-sub" data-lang="en">Three steps, zero excuses.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3 data-lang="tr">Görevlerini ekle</h3>
+        <h3 data-lang="en">Add your tasks</h3>
+        <p data-lang="tr">Aklındaki her şeyi listele, zorluk seviyesini seç.</p>
+        <p data-lang="en">List everything on your mind and set a difficulty.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3 data-lang="tr">Çarkı çevir</h3>
+        <h3 data-lang="en">Spin the wheel</h3>
+        <p data-lang="tr">Rulet senin yerine seçer. İtiraz yok, düşünme yok.</p>
+        <p data-lang="en">The wheel picks for you. No debate, no overthinking.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3 data-lang="tr">Bitir, kutla</h3>
+        <h3 data-lang="en">Finish & celebrate</h3>
+        <p data-lang="tr">Görevi tamamla, konfetiyi kap, tekrar çevir.</p>
+        <p data-lang="en">Complete the task, grab your confetti, spin again.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2 class="section-title" data-lang="tr">Sık sorulanlar</h2>
+    <h2 class="section-title" data-lang="en">FAQ</h2>
+    <p class="section-sub" data-lang="tr"> </p>
+    <p class="section-sub" data-lang="en"> </p>
+
+    <div class="faq">
+      <details open>
+        <summary><span data-lang="tr">Task Roulette ücretsiz mi?</span><span data-lang="en">Is Task Roulette free?</span></summary>
+        <p data-lang="tr">Evet, temel özellikler ücretsiz. Ekstra temalar ve sınırsız görev ekleme gibi bazı özellikler Pro sürümde.</p>
+        <p data-lang="en">Yes, the core features are free. Some extras like additional themes and adding more than 10 tasks are part of Pro.</p>
+      </details>
+      <details open>
+        <summary><span data-lang="tr">Hangi cihazlarda çalışır?</span><span data-lang="en">Which devices does it support?</span></summary>
+        <p data-lang="tr">iPhone için tasarlandı; ana ekran widget'ı da dahil.</p>
+        <p data-lang="en">Designed for iPhone, home screen widget included.</p>
+      </details>
+      <details open>
+        <summary><span data-lang="tr">Verilerim nerede saklanıyor?</span><span data-lang="en">Where is my data stored?</span></summary>
+        <p data-lang="tr">Görevlerin cihazında saklanır. Ayrıntılar için <a href="/task-roulette-privacy/">gizlilik politikasına</a> bakabilirsin.</p>
+        <p data-lang="en">Your tasks live on your device. See the <a href="/task-roulette-privacy/">privacy policy</a> for details.</p>
+      </details>
+      <details open>
+        <summary><span data-lang="tr">Neden rastgele seçim işe yarıyor?</span><span data-lang="en">Why does random picking work?</span></summary>
+        <p data-lang="tr">Uzun listeler karar felci yaratır: hangi işin "en doğru" olduğunu düşünürken hiçbirine başlayamazsın. Seçimi çarka bırakmak bu düğümü keser. Başlamak, mükemmel sırayı bulmaktan daha değerlidir.</p>
+        <p data-lang="en">Long lists cause decision paralysis: while you hunt for the "right" task, you start none. Handing the choice to the wheel cuts that knot. Starting beats finding the perfect order.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <h2 data-lang="tr">Bugün kaç görevi çarka bırakacaksın?</h2>
+    <h2 data-lang="en">How many tasks will you leave to the wheel today?</h2>
+    <p data-lang="tr">İndir, ilk görevini ekle, çevir.</p>
+    <p data-lang="en">Download it, add your first task, spin.</p>
+    <a class="appstore-badge" href="https://apps.apple.com/app/6783888710">
+      <svg data-lang="tr" viewBox="0 0 168 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="App Store'dan indirin">
+        <rect width="168" height="56" rx="12" fill="#000"/>
+        <rect x="0.75" y="0.75" width="166.5" height="54.5" rx="11.25" fill="none" stroke="#a6a6a6" stroke-width="1.5"/>
+        <g transform="translate(13,13) scale(1.25)" fill="#fff">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </g>
+        <text x="52" y="24" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">App Store'dan</text>
+        <text x="52" y="43" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="600">İndirin</text>
+      </svg>
+      <svg data-lang="en" viewBox="0 0 168 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Download on the App Store">
+        <rect width="168" height="56" rx="12" fill="#000"/>
+        <rect x="0.75" y="0.75" width="166.5" height="54.5" rx="11.25" fill="none" stroke="#a6a6a6" stroke-width="1.5"/>
+        <g transform="translate(13,13) scale(1.25)" fill="#fff">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </g>
+        <text x="52" y="24" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12">Download on the</text>
+        <text x="52" y="43" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="600">App Store</text>
+      </svg>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> <a href="https://www.inarli.com">İlkay Narlı</a></span>
+    <span>
+      <a href="/task-roulette-privacy/" data-lang="tr">Gizlilik</a>
+      <a href="/task-roulette-privacy/" data-lang="en">Privacy</a>
+      &nbsp;·&nbsp;
+      <a href="/task-roulette-terms-and-conditions/" data-lang="tr">Kullanım Koşulları</a>
+      <a href="/task-roulette-terms-and-conditions/" data-lang="en">Terms</a>
+    </span>
+  </div>
+  <div class="wrap footer-joke">
+    <span data-lang="tr">❤️ Bu sayfa da ruletin seçtiği bir görevdi. İtiraz edemedim.</span>
+    <span data-lang="en">❤️ This page was also a task the wheel picked. I don't argue with the wheel.</span>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-active-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('tr-lang', lang); } catch (e) {}
+  }
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('tr-lang'); } catch (e) {}
+    var lang = saved || ((navigator.language || 'en').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
+    setLang(lang);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+
+</body>
+</html>

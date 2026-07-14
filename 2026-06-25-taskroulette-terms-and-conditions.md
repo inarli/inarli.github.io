@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Task Roulette Privacy Policy"
+title: "Task Roulette Terms and Conditions"
 permalink: /task-roulette-terms-and-conditions/
 ---
 **Terms & Conditions**
