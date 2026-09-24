@@ -3,6 +3,8 @@ layout: page
 title: "Task Roulette Terms and Conditions"
 permalink: /task-roulette-terms-and-conditions/
 ---
+*Bu sayfanın [Türkçesi burada](/task-roulette-kullanim-kosullari/).*
+
 **Terms & Conditions**
 
 These terms and conditions apply to the Task Roulette app for mobile devices, together with any related services operated by İlkay Narlı (collectively, the "Application"). İlkay Narlı is hereby referred to as the "Service Provider".

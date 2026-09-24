@@ -3,6 +3,8 @@ layout: page
 title: "Task Roulette Privacy Policy"
 permalink: /task-roulette-privacy/
 ---
+*Bu sayfanın [Türkçesi burada](/task-roulette-gizlilik/).*
+
 **Privacy Policy**
 
 This privacy policy applies to the Task Roulette app for mobile devices, together with any related services operated by İlkay Narlı (collectively, the "Application"). İlkay Narlı is hereby referred to as the "Service Provider".
@@ -111,22 +113,22 @@ If you have any questions regarding privacy while using the Application, or have
 
 ---
 
-**KVKK Aydınlatma Metni — Not Tarama ve Zorluk Tahmini (Türkiye'deki kullanıcılar için)**
+**Notice under the Turkish Personal Data Protection Law (KVKK) — Note Scanning and Difficulty Estimation**
 
-*This section is provided in Turkish for users in Türkiye, as required by Turkish data protection law (KVKK).*
+This notice applies to users in Türkiye and is provided under Law No. 6698 on the Protection of Personal Data (KVKK).
 
-**Veri sorumlusu:** İlkay Narlı (Task Roulette geliştiricisi).
+**Data controller:** İlkay Narlı, the developer of Task Roulette.
 
-**İşlenen veri:** Not tarama özelliğini kullandığınızda, fotoğraftaki metin cihazınızda okunur. Yalnızca zorluk tahmini özelliğini açıkça seçmeniz hâlinde, okunan görev metinleri işlenmek üzere gönderilir. Fotoğrafın kendisi hiçbir koşulda cihazınızdan çıkmaz. Kimliğinizi belirleyen hiçbir bilgi (ad, e-posta, cihaz kimliği, konum) gönderilmez.
+**Data processed:** When you use the note scanning feature, the text in the photograph is recognised on your device. The recognised task text is transmitted for processing only if you explicitly enable the difficulty estimation feature. The photograph itself never leaves your device under any circumstances. No information identifying you — name, e-mail address, device identifier or location — is transmitted.
 
-**İşleme amacı:** Görevlerinize 1–5 arası bir zorluk seviyesi tahmin etmek.
+**Purpose of processing:** To estimate a difficulty level from 1 to 5 for your tasks.
 
-**Hukuki sebep:** Açık rızanız (KVKK md. 5/1). Rıza vermezseniz özellik çalışmaz, uygulamanın geri kalanı normal şekilde kullanılabilir.
+**Legal basis:** Your explicit consent, under Article 5/1 of the KVKK. If you do not give consent, the feature does not run and the rest of the Application remains fully usable.
 
-**Yurt dışına aktarım:** Görev metinleri, altyapı sağlayıcımız Cloudflare, Inc. ve model sağlayıcımız Anthropic PBC üzerinden yurt dışındaki sunucularda işlenir (KVKK md. 9). Bu aktarım açık rızanıza dayanır.
+**Transfer abroad:** Task text is processed on servers outside Türkiye, through our infrastructure provider Cloudflare, Inc. and our model provider Anthropic PBC, within the meaning of Article 9 of the KVKK. This transfer is based on your explicit consent.
 
-**Saklama:** Metinler tarafımızca kaydedilmez ve saklanmaz. Model sağlayıcı, kendi hizmet koşulları gereği girdileri kötüye kullanım denetimi amacıyla sınırlı bir süre tutabilir.
+**Retention:** We do not record or store this text. The model provider may retain inputs for a limited period for abuse monitoring under its own terms of service.
 
-**Rızanın geri alınması:** Uygulama içinde Ayarlar → Yapay Zekâ → "Zorluğu Otomatik Tahmin Et" anahtarını kapatarak rızanızı her an geri alabilirsiniz. Özellik varsayılan olarak kapalıdır.
+**Withdrawing consent:** You may withdraw your consent at any time by turning off Settings → AI → "Estimate Difficulty Automatically" in the Application. The feature is off by default.
 
-**Haklarınız (KVKK md. 11):** Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, işlenme amacını öğrenme, düzeltilmesini veya silinmesini isteme ve zararın giderilmesini talep etme haklarına sahipsiniz. Başvurularınız için: ilkaynarli@gmail.com
+**Your rights (KVKK Article 11):** You have the right to learn whether your personal data is being processed, to request information about it, to learn the purpose of processing, to request its correction or erasure, and to claim compensation for any damage suffered. To exercise these rights, contact ilkaynarli@gmail.com.
