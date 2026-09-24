@@ -16,6 +16,16 @@ The Application collects information when you download and use it. This informat
 *   The time spent on the Application
 *   your mobile operating system you use
 
+**Note Scanning and AI Difficulty Estimation**
+
+The Application can read text from a photo of your handwritten notes. The text recognition happens entirely on your device, and the photo itself never leaves your device under any circumstances.
+
+The Application also offers an optional feature that estimates a difficulty level from 1 to 5 for each recognised task. This feature is turned off by default. It runs only after you explicitly turn it on, either from the card shown after a scan or from Settings → AI. When it is on, only the recognised task text is sent over an encrypted connection to an endpoint operated by the Service Provider and hosted by Cloudflare, Inc., where it is processed by a language model provided by Anthropic PBC. No identifying information of any kind accompanies it — no name, e-mail address, device identifier or location.
+
+The Service Provider does not store or log this text. The model provider may retain inputs for a limited period for abuse monitoring under its own terms of service.
+
+You may turn the feature off at any time in Settings → AI → "Estimate Difficulty Automatically". While it is off, no task text leaves your device and the rest of the Application continues to work normally.
+
 **Cookies and tracking technologies**
 
 The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will obtain consent before using non-essential tracking technologies.
@@ -34,7 +44,7 @@ For a better experience while using the Application, the Service Provider may re
 
 **Third Party Access**
 
-Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
+Aggregated, anonymized data may be periodically transmitted to external services to aid the Service Provider in improving the Application and their service. In addition, if you turn on the optional AI difficulty estimation feature described under "Note Scanning and AI Difficulty Estimation" above, the recognised task text is transmitted to the Service Provider's processors for that purpose only. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
 
 **International Data Transfers**
 
@@ -89,7 +99,7 @@ The Service Provider may update this Privacy Policy from time to time. The Servi
 
 Previous versions of this Privacy Policy will be maintained and made available upon request by contacting the Service Provider at ilkaynarli@gmail.com.
 
-This privacy policy is effective as of 2026-06-24
+This privacy policy is effective as of 2026-09-24
 
 **Your Consent**
 
@@ -98,3 +108,25 @@ Where processing is based on consent, you provide that consent by affirmatively 
 **Contact Us**
 
 If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at ilkaynarli@gmail.com.
+
+---
+
+**KVKK Aydınlatma Metni — Not Tarama ve Zorluk Tahmini (Türkiye'deki kullanıcılar için)**
+
+*This section is provided in Turkish for users in Türkiye, as required by Turkish data protection law (KVKK).*
+
+**Veri sorumlusu:** İlkay Narlı (Task Roulette geliştiricisi).
+
+**İşlenen veri:** Not tarama özelliğini kullandığınızda, fotoğraftaki metin cihazınızda okunur. Yalnızca zorluk tahmini özelliğini açıkça seçmeniz hâlinde, okunan görev metinleri işlenmek üzere gönderilir. Fotoğrafın kendisi hiçbir koşulda cihazınızdan çıkmaz. Kimliğinizi belirleyen hiçbir bilgi (ad, e-posta, cihaz kimliği, konum) gönderilmez.
+
+**İşleme amacı:** Görevlerinize 1–5 arası bir zorluk seviyesi tahmin etmek.
+
+**Hukuki sebep:** Açık rızanız (KVKK md. 5/1). Rıza vermezseniz özellik çalışmaz, uygulamanın geri kalanı normal şekilde kullanılabilir.
+
+**Yurt dışına aktarım:** Görev metinleri, altyapı sağlayıcımız Cloudflare, Inc. ve model sağlayıcımız Anthropic PBC üzerinden yurt dışındaki sunucularda işlenir (KVKK md. 9). Bu aktarım açık rızanıza dayanır.
+
+**Saklama:** Metinler tarafımızca kaydedilmez ve saklanmaz. Model sağlayıcı, kendi hizmet koşulları gereği girdileri kötüye kullanım denetimi amacıyla sınırlı bir süre tutabilir.
+
+**Rızanın geri alınması:** Uygulama içinde Ayarlar → Yapay Zekâ → "Zorluğu Otomatik Tahmin Et" anahtarını kapatarak rızanızı her an geri alabilirsiniz. Özellik varsayılan olarak kapalıdır.
+
+**Haklarınız (KVKK md. 11):** Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, işlenme amacını öğrenme, düzeltilmesini veya silinmesini isteme ve zararın giderilmesini talep etme haklarına sahipsiniz. Başvurularınız için: ilkaynarli@gmail.com
