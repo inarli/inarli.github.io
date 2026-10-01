@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: taskroulette-page
 title: "Task Roulette Gizlilik Politikası"
 permalink: /task-roulette-gizlilik/
+lang: "tr"
+description: "Task Roulette gizlilik politikası: uygulamanın cihazında sakladıkları ve isteğe bağlı yapay zekâ zorluk tahmini."
 ---
 *This page is also available in [English](/task-roulette-privacy/).*
-
-**Gizlilik Politikası**
 
 Bu gizlilik politikası, mobil cihazlar için Task Roulette uygulaması ve İlkay Narlı tarafından işletilen ilgili hizmetler (topluca "Uygulama") için geçerlidir. İlkay Narlı bundan sonra "Hizmet Sağlayıcı" olarak anılacaktır.
 

@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: taskroulette-page
 title: "Task Roulette Privacy Policy"
 permalink: /task-roulette-privacy/
+lang: "en"
+description: "Task Roulette privacy policy: what the app stores on your device, and the optional AI difficulty estimation."
 ---
 *Bu sayfanın [Türkçesi burada](/task-roulette-gizlilik/).*
-
-**Privacy Policy**
 
 This privacy policy applies to the Task Roulette app for mobile devices, together with any related services operated by İlkay Narlı (collectively, the "Application"). İlkay Narlı is hereby referred to as the "Service Provider".
 

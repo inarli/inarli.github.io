@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: taskroulette-page
 title: "Task Roulette Kullanım Koşulları"
 permalink: /task-roulette-kullanim-kosullari/
+lang: "tr"
+description: "Task Roulette kullanım koşulları: lisans, kabul edilebilir kullanım, sorumluluk ve DSA hükümleri."
 ---
 *This page is also available in [English](/task-roulette-terms-and-conditions/).*
-
-**Kullanım Koşulları**
 
 Bu kullanım koşulları, mobil cihazlar için Task Roulette uygulaması ve İlkay Narlı tarafından işletilen ilgili hizmetler (topluca "Uygulama") için geçerlidir. İlkay Narlı bundan sonra "Hizmet Sağlayıcı" olarak anılacaktır.
 

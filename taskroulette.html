@@ -607,7 +607,9 @@ permalink: /taskroulette/
 
     function spin() {
       var target = pick();
-      var elapsed = 0, TOTAL = 1800, FROM = 70, TO = 220;
+      // Hiz ayari burada. Uygulamada 1800/70/220; sayfada izleyen kisi
+      // Cevir'e kendi basmadigi icin basliklari okuyabilecek kadar yavas.
+      var elapsed = 0, TOTAL = 2800, FROM = 160, TO = 520;
       titleEl.classList.remove('landed');
       levelEl.textContent = '';
       for (var i = 0; i < pips.length; i++) pips[i].classList.remove('on');
@@ -618,7 +620,7 @@ permalink: /taskroulette/
           paintLanded();
           titleEl.classList.add('landed');
           setTimeout(function () { titleEl.classList.remove('landed'); }, 420);
-          setTimeout(spin, 2600);
+          setTimeout(spin, 3200);   // kilitlenen gorev ekranda kalma suresi
           return;
         }
         var L = lang();
