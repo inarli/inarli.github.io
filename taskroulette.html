@@ -187,34 +187,18 @@ permalink: /taskroulette/
     font-size: 0.62rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
     color: #9A8FA8; margin-bottom: 10px;
   }
-  .slot { position: relative; height: 56px; }
-  .slot span {
-    position: absolute; inset: 0; display: grid; place-items: center;
+  .slot { position: relative; height: 56px; display: grid; place-items: center; }
+  #slotTitle {
     font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 0.98rem; line-height: 1.2;
-    color: var(--ink); opacity: 0; padding: 0 4px;
+    color: var(--ink); padding: 0 4px; text-align: center;
+    transition: transform .18s ease, text-shadow .18s ease;
   }
-  .slot span.f { animation: slotFlash 5s infinite; }
-  .slot span.f:nth-of-type(1) { animation-delay: 0s; }
-  .slot span.f:nth-of-type(2) { animation-delay: .22s; }
-  .slot span.f:nth-of-type(3) { animation-delay: .48s; }
-  .slot span.f:nth-of-type(4) { animation-delay: .80s; }
-  .slot span.f:nth-of-type(5) { animation-delay: 1.18s; }
-  .slot span.f:nth-of-type(6) { animation-delay: 1.62s; }
-  .slot span.landed { animation: slotLand 5s infinite; }
-  @keyframes slotFlash {
-    0%, 100% { opacity: 0; }
-    1%, 4%   { opacity: 1; }
-    5%       { opacity: 0; }
-  }
-  @keyframes slotLand {
-    0%, 39%  { opacity: 0; transform: scale(.96); text-shadow: none; }
-    42%      { opacity: 1; transform: scale(1.06); text-shadow: 0 0 16px rgba(255,197,61,.85); }
-    47%, 90% { opacity: 1; transform: scale(1); text-shadow: 0 0 10px rgba(255,197,61,.35); }
-    96%,100% { opacity: 0; transform: scale(1); text-shadow: none; }
-  }
-  .slot-pips { display: flex; gap: 5px; justify-content: center; margin-top: 10px; }
+  #slotTitle.landed { transform: scale(1.05); text-shadow: 0 0 14px rgba(255,197,61,.8); }
+  .slot-meta { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
+  .slot-pips { display: flex; gap: 5px; }
   .slot-pips i { width: 7px; height: 7px; border-radius: 50%; background: rgba(42,16,66,.14); }
-  .slot-pips i:nth-child(-n+3) { background: var(--token, #FFC53D); }
+  .slot-pips i.on { background: #FFC53D; }
+  #slotLevel { font-size: .72rem; font-weight: 800; color: #9A8FA8; }
   .spin-btn {
     margin-top: 4px; width: 210px; padding: 13px 0; border-radius: 16px;
     background: var(--pink); color: #fff; font-family: "Fredoka", sans-serif;
@@ -350,31 +334,13 @@ permalink: /taskroulette/
     </div>
 
     <div class="phone" aria-hidden="true">
-      <div class="slot-card" data-lang="tr">
-        <div class="slot-label">Aktif Görev</div>
-        <div class="slot">
-          <span class="f">Çöpü dışarı çıkar</span>
-          <span class="f">Bitkileri sula</span>
-          <span class="f">Faturaları gözden geçir</span>
-          <span class="f">Kısa bir yürüyüşe çık</span>
-          <span class="f">Bulaşık makinesini boşalt</span>
-          <span class="f">Yarınki kıyafetini hazırla</span>
-          <span class="landed">Haftalık market listesini hazırla</span>
+      <div class="slot-card">
+        <div class="slot-label" id="slotLabel">Aktif Görev</div>
+        <div class="slot"><div id="slotTitle">&nbsp;</div></div>
+        <div class="slot-meta">
+          <div class="slot-pips" id="slotPips"><i></i><i></i><i></i><i></i><i></i></div>
+          <span id="slotLevel"></span>
         </div>
-        <div class="slot-pips"><i></i><i></i><i></i><i></i><i></i></div>
-      </div>
-      <div class="slot-card" data-lang="en">
-        <div class="slot-label">Active task</div>
-        <div class="slot">
-          <span class="f">Take out the trash</span>
-          <span class="f">Water the plants</span>
-          <span class="f">Review the invoices</span>
-          <span class="f">Go for a short walk</span>
-          <span class="f">Empty the dishwasher</span>
-          <span class="f">Pick tomorrow's outfit</span>
-          <span class="landed">Weekly grocery shopping list</span>
-        </div>
-        <div class="slot-pips"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
       <div class="spin-btn" data-lang="tr">✳ Çevir</div>
       <div class="spin-btn" data-lang="en">✳ Spin</div>
@@ -565,6 +531,7 @@ permalink: /taskroulette/
     document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     try { localStorage.setItem('tr-lang', lang); } catch (e) {}
+    if (window.__slotRepaint) window.__slotRepaint();
   }
   (function () {
     var saved = null;
@@ -583,5 +550,87 @@ permalink: /taskroulette/
         ga('create', 'UA-160013990-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+<script>
+  // Slot maketi — uygulamadaki SlotAnimationView davranisi:
+  // basliklar hizli gecer, yavaslar, rastgele bir gorevde kilitlenir ve
+  // altin bir parilti ile durur. Zorluk pip'leri kilitlenen goreve ait.
+  // Zamanlamalar uygulamadan: toplam 1.8 sn, 0.07 sn -> 0.22 sn aralik.
+  (function () {
+    var TASKS = [
+      { tr: "Bitkileri sula",                        en: "Water the indoor plants",        d: 1 },
+      { tr: "1 bardak su iç & omuzlarını esnet",     en: "Drink a glass of water & stretch", d: 1 },
+      { tr: "Yarın için kıyafetlerini hazırla",      en: "Pick outfits for tomorrow",      d: 2 },
+      { tr: "Günlük 10 sayfa kitap oku",             en: "Read 10 pages of a book",        d: 2 },
+      { tr: "Çöpü dışarı çıkar",                     en: "Take out the trash",             d: 2 },
+      { tr: "Haftalık market listesini hazırla",     en: "Weekly grocery shopping list",   d: 3 },
+      { tr: "Kısa bir yürüyüşe çık (20 dk)",         en: "Go for a quick 20-min walk",     d: 3 },
+      { tr: "Bulaşık makinesini boşalt",             en: "Empty the dishwasher",           d: 3 },
+      { tr: "Aylık bütçe tablosunu hazırla",         en: "Prepare the monthly budget",     d: 4 },
+      { tr: "Biriken faturaları gözden geçir",       en: "Review the pending invoices",    d: 4 },
+      { tr: "Çeyrek dönem sunumunu tamamla",         en: "Finish the quarterly deck",      d: 5 }
+    ];
+    var LEVELS = {
+      tr: ["Çok Kolay", "Kolay", "Orta", "Zor", "Çok Zor"],
+      en: ["Very Easy", "Easy", "Medium", "Hard", "Very Hard"]
+    };
+    var titleEl = document.getElementById('slotTitle');
+    var pipsEl  = document.getElementById('slotPips');
+    var levelEl = document.getElementById('slotLevel');
+    var labelEl = document.getElementById('slotLabel');
+    if (!titleEl) return;
+
+    var pips = pipsEl.querySelectorAll('i');
+    var landed = null;
+
+    function lang() {
+      return document.documentElement.getAttribute('data-active-lang') === 'en' ? 'en' : 'tr';
+    }
+    function paintLanded() {
+      if (!landed) return;
+      var L = lang();
+      titleEl.textContent = landed[L];
+      levelEl.textContent = LEVELS[L][landed.d - 1];
+      labelEl.textContent = L === 'en' ? 'Active task' : 'Aktif Görev';
+      for (var i = 0; i < pips.length; i++) pips[i].classList.toggle('on', i < landed.d);
+    }
+    window.__slotRepaint = paintLanded;
+
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function pick() {
+      var t;
+      do { t = TASKS[Math.floor(Math.random() * TASKS.length)]; } while (TASKS.length > 1 && t === landed);
+      return t;
+    }
+
+    if (reduce) { landed = pick(); paintLanded(); return; }
+
+    function spin() {
+      var target = pick();
+      var elapsed = 0, TOTAL = 1800, FROM = 70, TO = 220;
+      titleEl.classList.remove('landed');
+      levelEl.textContent = '';
+      for (var i = 0; i < pips.length; i++) pips[i].classList.remove('on');
+
+      (function step() {
+        if (elapsed >= TOTAL) {
+          landed = target;
+          paintLanded();
+          titleEl.classList.add('landed');
+          setTimeout(function () { titleEl.classList.remove('landed'); }, 420);
+          setTimeout(spin, 2600);
+          return;
+        }
+        var L = lang();
+        titleEl.textContent = TASKS[Math.floor(Math.random() * TASKS.length)][L];
+        var k = elapsed / TOTAL;                 // 0 -> 1
+        var wait = FROM + (TO - FROM) * k * k;   // sona dogru yavasla
+        elapsed += wait;
+        setTimeout(step, wait);
+      })();
+    }
+    spin();
+  })();
+</script>
 </body>
 </html>
