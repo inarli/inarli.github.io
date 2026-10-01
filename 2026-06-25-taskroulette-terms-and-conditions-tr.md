@@ -52,11 +52,11 @@ Hizmet Sağlayıcı aşağıdaki haklarını saklı tutar:
 
 Uygulama aracılığıyla gönderilen içerik, Uygulamanın işleyişine bağlı olarak diğer kullanıcılara veya kamuya görünür olabilir.
 
-Bir içeriğin bu Koşulları ihlal ettiğini, haklarınızı çiğnediğini veya hukuka aykırı olduğunu düşünüyorsanız, ilkaynarli@gmail.com adresinden Hizmet Sağlayıcı'ya bildirebilirsiniz. Bildirim; Hizmet Sağlayıcı'nın içeriği tespit etmesine, şikâyeti değerlendirmesine ve gerekirse sizinle iletişime geçmesine yetecek bilgileri içermelidir.
+Bir içeriğin bu Koşulları ihlal ettiğini, haklarınızı çiğnediğini veya hukuka aykırı olduğunu düşünüyorsanız, support@inarli.com adresinden Hizmet Sağlayıcı'ya bildirebilirsiniz. Bildirim; Hizmet Sağlayıcı'nın içeriği tespit etmesine, şikâyeti değerlendirmesine ve gerekirse sizinle iletişime geçmesine yetecek bilgileri içermelidir.
 
 Uygulama bu özellikleri sunduğu ölçüde, içeriği bildirebilir, diğer kullanıcıları engelleyebilir veya bildirimleri sessize alabilirsiniz. Hizmet Sağlayıcı uygulama içi bildirimleri bu Koşullarda açıklanan aynı ölçütlerle inceleyecektir.
 
-Hizmet Sağlayıcı, bildirilen içeriği inceleyebilir, gerekli gördüğünde ek bilgi talep edebilir, içeriği kaldırabilir veya erişimi kısıtlayabilir ve uygun hâllerde sorumlu hesaba yönelik işlem yapabilir. Denetim kararlarından etkilenen kullanıcılar, kararın yeniden incelenmesini talep etmek için ilkaynarli@gmail.com adresinden Hizmet Sağlayıcı ile iletişime geçebilir. Hizmet Sağlayıcı itirazlara makul bir süre içinde yanıt verecek ve ilgili mevzuat saklı kalmak kaydıyla, onadığı denetim kararlarının gerekçelerini bildirecektir.
+Hizmet Sağlayıcı, bildirilen içeriği inceleyebilir, gerekli gördüğünde ek bilgi talep edebilir, içeriği kaldırabilir veya erişimi kısıtlayabilir ve uygun hâllerde sorumlu hesaba yönelik işlem yapabilir. Denetim kararlarından etkilenen kullanıcılar, kararın yeniden incelenmesini talep etmek için support@inarli.com adresinden Hizmet Sağlayıcı ile iletişime geçebilir. Hizmet Sağlayıcı itirazlara makul bir süre içinde yanıt verecek ve ilgili mevzuat saklı kalmak kaydıyla, onadığı denetim kararlarının gerekçelerini bildirecektir.
 
 Kullanıcı Tarafından Oluşturulan İçerik göndererek, Hizmet Sağlayıcı'ya bu içeriği Uygulama ve Hizmet Sağlayıcı'nın faaliyetleri kapsamında kullanma, çoğaltma, dağıtma, türev çalışmalar hazırlama, görüntüleme ve icra etme konusunda münhasır olmayan, dünya çapında ve bedelsiz bir lisans vermiş olursunuz. Bu lisans, Hizmet Sağlayıcı'ya içeriğinizi Uygulamadan bağımsız olarak üçüncü taraflara satma veya alt lisansla devretme hakkı vermez. Gönderdiğiniz içerikteki tüm haklara sahip olduğunuzu veya bunları kontrol ettiğinizi ve içeriğin kullanımının bu Koşulları ya da ilgili mevzuatı ihlal etmediğini beyan ve taahhüt edersiniz.
 
@@ -106,7 +106,7 @@ Bu Koşullardan doğan veya bunlarla ilgili her türlü uyuşmazlık, ilgili mev
 
 Uygulama, Dijital Hizmetler Yasası (AB 2022/2065 sayılı Tüzük, "DSA") kapsamında bir aracı hizmet niteliğindeyse, yukarıdaki koşullara ek olarak aşağıdaki hükümler uygulanır.
 
-**İletişim Noktası:** Hizmet Sağlayıcı, AB makamları ve hizmet alıcılarıyla doğrudan iletişim için ilkaynarli@gmail.com adresinden ulaşılabilecek tek bir iletişim noktası bulundurur. Hizmet Sağlayıcı'nın Avrupa Birliği dışında yerleşik olduğu hâllerde, DSA'nın 13. maddesi uyarınca AB'de bir yasal temsilci belirlenmiştir.
+**İletişim Noktası:** Hizmet Sağlayıcı, AB makamları ve hizmet alıcılarıyla doğrudan iletişim için support@inarli.com adresinden ulaşılabilecek tek bir iletişim noktası bulundurur. Hizmet Sağlayıcı'nın Avrupa Birliği dışında yerleşik olduğu hâllerde, DSA'nın 13. maddesi uyarınca AB'de bir yasal temsilci belirlenmiştir.
 
 **İçerik Denetimi ve Gerekçe Bildirimi:** Hizmet Sağlayıcı içeriğe erişimi kısıtladığında, bir hesabı askıya aldığında veya sonlandırdığında ya da Uygulamanın özelliklerinin kullanılabilirliğini başka şekilde sınırladığında, etkilenen kullanıcıya açık ve somut bir gerekçe bildirimi sunulur. Bildirim; DSA'nın 17. maddesi uyarınca kısıtlamanın niteliğini, kararın hukuki veya sözleşmesel dayanağını ve mevcut başvuru yollarını içerir.
 
@@ -114,7 +114,7 @@ Uygulama, Dijital Hizmetler Yasası (AB 2022/2065 sayılı Tüzük, "DSA") kapsa
 
 **Mahkeme Dışı Uyuşmazlık Çözümü:** İçerik denetimi kararlarına — içeriğin kısıtlanması veya hesapların askıya alınması dâhil — ilişkin uyuşmazlıklar, DSA'nın 21. maddesi uyarınca yetkilendirilmiş bir mahkeme dışı uyuşmazlık çözüm merciine götürülebilir. Hizmet Sağlayıcı bu mercilerle iyi niyetle iş birliği yapar. Mahkeme dışı çözüm yoluna başvurmanız, ilgili mevzuat uyarınca yargı yoluna başvurma hakkınızı etkilemez.
 
-**Şeffaflık Raporlaması:** Hizmet Sağlayıcı, DSA'nın 24. maddesi uyarınca, alınan bildirim sayısı, yapılan işlemler ve kullanılan otomatik araçlar dâhil olmak üzere içerik denetimi faaliyetlerini kapsayan dönemsel şeffaflık raporları yayımlar. Raporlar ilkaynarli@gmail.com adresinden talep üzerine sunulur.
+**Şeffaflık Raporlaması:** Hizmet Sağlayıcı, DSA'nın 24. maddesi uyarınca, alınan bildirim sayısı, yapılan işlemler ve kullanılan otomatik araçlar dâhil olmak üzere içerik denetimi faaliyetlerini kapsayan dönemsel şeffaflık raporları yayımlar. Raporlar support@inarli.com adresinden talep üzerine sunulur.
 
 Bu DSA hükümleri, Uygulamanın DSA kapsamında bir aracı hizmet niteliğinde olduğu ölçüde uygulanır ve ilgili tüketici koruma veya veri koruma mevzuatından doğan hak ve yükümlülüklerin yerine geçmez ya da bunları sınırlandırmaz.
 
@@ -130,10 +130,10 @@ Bu Kullanım Koşulları, Gizlilik Politikasıyla birlikte, Uygulamayı kullanı
 
 Hizmet Sağlayıcı Kullanım Koşullarını dönemsel olarak güncelleyebilir. Bu nedenle değişiklikler için bu sayfayı düzenli olarak gözden geçirmeniz önerilir. Hizmet Sağlayıcı, yeni Kullanım Koşullarını bu sayfada yayımlayarak sizi değişikliklerden haberdar edecektir.
 
-Bu Kullanım Koşullarının önceki sürümleri saklanmakta olup ilkaynarli@gmail.com adresinden talep edilmesi hâlinde sunulur.
+Bu Kullanım Koşullarının önceki sürümleri saklanmakta olup support@inarli.com adresinden talep edilmesi hâlinde sunulur.
 
 Bu kullanım koşulları 2026-06-24 tarihinden itibaren geçerlidir.
 
 **Bize Ulaşın**
 
-Kullanım Koşulları hakkında sorularınız veya önerileriniz varsa, lütfen ilkaynarli@gmail.com adresinden Hizmet Sağlayıcı ile iletişime geçmekten çekinmeyin.
+Kullanım Koşulları hakkında sorularınız veya önerileriniz varsa, lütfen support@inarli.com adresinden Hizmet Sağlayıcı ile iletişime geçmekten çekinmeyin.

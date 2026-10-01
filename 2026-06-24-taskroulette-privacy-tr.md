@@ -34,11 +34,11 @@ Uygulama veya üçüncü taraf SDK'ları; işlevsellik, analiz veya hizmet sunum
 
 **Haklarınız**
 
-Hizmet Sağlayıcı'nın elinde bulunan kişisel verilerinize erişim, bunların düzeltilmesi veya silinmesi talebinde bulunabilirsiniz. Bu haklarınızı kullanmak veya işlemenin onaya dayandığı hâllerde onayınızı geri çekmek için Hizmet Sağlayıcı ile ilkaynarli@gmail.com adresinden iletişime geçin.
+Hizmet Sağlayıcı'nın elinde bulunan kişisel verilerinize erişim, bunların düzeltilmesi veya silinmesi talebinde bulunabilirsiniz. Bu haklarınızı kullanmak veya işlemenin onaya dayandığı hâllerde onayınızı geri çekmek için Hizmet Sağlayıcı ile support@inarli.com adresinden iletişime geçin.
 
 **Kaliforniya gizlilik haklarınız (CCPA/CPRA)**
 
-Kaliforniya'da ikamet ediyorsanız; hangi kişisel bilgilerin toplandığını öğrenme, kişisel bilgilerin silinmesini isteme, kişisel bilgilerin satışından veya paylaşılmasından vazgeçme ve bu hakları kullandığınız için ayrımcılığa uğramama haklarına sahipsiniz. CCPA/CPRA haklarınızı kullanmak için Hizmet Sağlayıcı ile ilkaynarli@gmail.com adresinden iletişime geçin.
+Kaliforniya'da ikamet ediyorsanız; hangi kişisel bilgilerin toplandığını öğrenme, kişisel bilgilerin silinmesini isteme, kişisel bilgilerin satışından veya paylaşılmasından vazgeçme ve bu hakları kullandığınız için ayrımcılığa uğramama haklarına sahipsiniz. CCPA/CPRA haklarınızı kullanmak için Hizmet Sağlayıcı ile support@inarli.com adresinden iletişime geçin.
 
 Hizmet Sağlayıcı, sağladığınız bilgileri önemli bilgilendirmeler, zorunlu bildirimler ve hukuken izin verilen hâllerde pazarlama iletileri göndermek için kullanabilir.
 
@@ -68,7 +68,7 @@ Hizmet Sağlayıcı, Kullanıcı Tarafından Sağlanan ve Otomatik Olarak Toplan
 
 Uygulamayı kaldırarak mobil cihazınızdan bilgi toplanmasını durdurabilirsiniz. Kaldırma işlemi, Uygulamanın cihazınızdan veri toplamasını durdurur; ancak daha önce Hizmet Sağlayıcı'ya veya üçüncü taraflara aktarılmış bilgileri otomatik olarak silmez.
 
-Kişisel verilerinizin silinmesini talep etmek, onayınızı geri çekmek veya haklarınızdan herhangi birini kullanmak için Hizmet Sağlayıcı ile ilkaynarli@gmail.com adresinden iletişime geçin.
+Kişisel verilerinizin silinmesini talep etmek, onayınızı geri çekmek veya haklarınızdan herhangi birini kullanmak için Hizmet Sağlayıcı ile support@inarli.com adresinden iletişime geçin.
 
 **Veri Saklama Politikası**
 
@@ -79,13 +79,13 @@ Hizmet Sağlayıcı, kişisel verileri belirtilen amaçlar için gerekli olduğu
 *   Toplulaştırılmış ve Anonimleştirilmiş Veriler: Artık sizi tanımlamadığı için süresiz
 *   Hukuki uyum için gereken veriler: İlgili mevzuatın gerektirdiği süre boyunca
 
-Kişisel verilerinizin silinmesini, saklamaya ilişkin hukuki bir yükümlülük bulunmadığı sürece talep edebilirsiniz. Uygulama aracılığıyla gönderilen Kullanıcı Tarafından Sağlanan Verilerin silinmesini istiyorsanız ilkaynarli@gmail.com adresinden iletişime geçin. Bazı Kullanıcı Tarafından Sağlanan Verilerin Uygulamanın düzgün çalışması için gerekli olabileceğini lütfen unutmayın.
+Kişisel verilerinizin silinmesini, saklamaya ilişkin hukuki bir yükümlülük bulunmadığı sürece talep edebilirsiniz. Uygulama aracılığıyla gönderilen Kullanıcı Tarafından Sağlanan Verilerin silinmesini istiyorsanız support@inarli.com adresinden iletişime geçin. Bazı Kullanıcı Tarafından Sağlanan Verilerin Uygulamanın düzgün çalışması için gerekli olabileceğini lütfen unutmayın.
 
 **Çocuklar**
 
 Uygulama 16 yaşın altındaki çocuklara — ya da ilgili mevzuatın öngördüğü daha yüksek yaşın altındakilere — yönelik değildir. Hizmet Sağlayıcı çocuklardan bilerek veri talep etmez ve Uygulamayı onlara pazarlamaz.
 
-Hizmet Sağlayıcı, çocuklardan bilerek kimlik belirleyici bilgi toplamaz. Hizmet Sağlayıcı, tüm çocukların Uygulama ve/veya Hizmetler aracılığıyla hiçbir zaman kimlik belirleyici bilgi göndermemesini önerir. Hizmet Sağlayıcı, ebeveynleri ve yasal vasileri çocuklarının internet kullanımını izlemeye ve çocuklarına izinleri olmadan Uygulama ve/veya Hizmetler aracılığıyla kimlik belirleyici bilgi vermemelerini söyleyerek bu Politikanın uygulanmasına yardımcı olmaya teşvik eder. Bir çocuğun Uygulama ve/veya Hizmetler aracılığıyla Hizmet Sağlayıcı'ya kimlik belirleyici bilgi verdiğini düşünmeniz için bir nedeniniz varsa, gerekli işlemlerin yapılabilmesi için lütfen Hizmet Sağlayıcı ile (ilkaynarli@gmail.com) iletişime geçin. 16 yaşın altındaysanız, hukuken izin verilen hâllerde ebeveyniniz veya vasiniz sizin adınıza onay vermelidir.
+Hizmet Sağlayıcı, çocuklardan bilerek kimlik belirleyici bilgi toplamaz. Hizmet Sağlayıcı, tüm çocukların Uygulama ve/veya Hizmetler aracılığıyla hiçbir zaman kimlik belirleyici bilgi göndermemesini önerir. Hizmet Sağlayıcı, ebeveynleri ve yasal vasileri çocuklarının internet kullanımını izlemeye ve çocuklarına izinleri olmadan Uygulama ve/veya Hizmetler aracılığıyla kimlik belirleyici bilgi vermemelerini söyleyerek bu Politikanın uygulanmasına yardımcı olmaya teşvik eder. Bir çocuğun Uygulama ve/veya Hizmetler aracılığıyla Hizmet Sağlayıcı'ya kimlik belirleyici bilgi verdiğini düşünmeniz için bir nedeniniz varsa, gerekli işlemlerin yapılabilmesi için lütfen Hizmet Sağlayıcı ile (support@inarli.com) iletişime geçin. 16 yaşın altındaysanız, hukuken izin verilen hâllerde ebeveyniniz veya vasiniz sizin adınıza onay vermelidir.
 
 **Güvenlik**
 
@@ -99,7 +99,7 @@ Kişisel verilerinizi etkileyen bir veri ihlali meydana gelmesi hâlinde, Hizmet
 
 Hizmet Sağlayıcı bu Gizlilik Politikasını zaman zaman güncelleyebilir. Esaslı değişiklikler hâlinde, güncellenmiş Gizlilik Politikasını yürürlük tarihiyle birlikte yayımlayarak sizi bilgilendirecektir. Mevzuatın gerektirdiği hâllerde, esaslı değişiklikler yürürlüğe girmeden önce onayınız alınacaktır.
 
-Bu Gizlilik Politikasının önceki sürümleri saklanmakta olup ilkaynarli@gmail.com adresinden talep edilmesi hâlinde sunulur.
+Bu Gizlilik Politikasının önceki sürümleri saklanmakta olup support@inarli.com adresinden talep edilmesi hâlinde sunulur.
 
 Bu gizlilik politikası 2026-09-24 tarihinden itibaren geçerlidir.
 
@@ -109,7 +109,7 @@ Bu gizlilik politikası 2026-09-24 tarihinden itibaren geçerlidir.
 
 **Bize Ulaşın**
 
-Uygulamayı kullanırken gizlilikle ilgili sorularınız veya uygulamalarımız hakkında sorularınız varsa, lütfen Hizmet Sağlayıcı ile ilkaynarli@gmail.com adresinden e-posta yoluyla iletişime geçin.
+Uygulamayı kullanırken gizlilikle ilgili sorularınız veya uygulamalarımız hakkında sorularınız varsa, lütfen Hizmet Sağlayıcı ile support@inarli.com adresinden e-posta yoluyla iletişime geçin.
 
 ---
 
@@ -131,4 +131,4 @@ Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) 
 
 **Rızanın geri alınması:** Uygulama içinde Ayarlar → Yapay Zekâ → "Zorluğu Otomatik Tahmin Et" anahtarını kapatarak rızanızı her an geri alabilirsiniz. Özellik varsayılan olarak kapalıdır.
 
-**Haklarınız (KVKK md. 11):** Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, işlenme amacını öğrenme, düzeltilmesini veya silinmesini isteme ve zararın giderilmesini talep etme haklarına sahipsiniz. Başvurularınız için: ilkaynarli@gmail.com
+**Haklarınız (KVKK md. 11):** Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, işlenme amacını öğrenme, düzeltilmesini veya silinmesini isteme ve zararın giderilmesini talep etme haklarına sahipsiniz. Başvurularınız için: support@inarli.com

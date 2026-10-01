@@ -52,11 +52,11 @@ The Service Provider reserves the right to:
 
 Content submitted through the Application may be visible to other users or to the public, depending on how the Application functions.
 
-If you believe content violates these Terms, infringes your rights, or is unlawful, you may report it to the Service Provider at ilkaynarli@gmail.com. The report should include enough information for the Service Provider to identify the content, evaluate the complaint, and contact you if follow-up is required.
+If you believe content violates these Terms, infringes your rights, or is unlawful, you may report it to the Service Provider at support@inarli.com. The report should include enough information for the Service Provider to identify the content, evaluate the complaint, and contact you if follow-up is required.
 
 Where the Application provides such features, you may also report content, block other users, or mute notifications directly through the Application's interface. The Service Provider will review in-app reports with the same standards described in these Terms.
 
-The Service Provider may review reported content, request additional information where necessary, remove or restrict access to content, and take action against the responsible account where appropriate. Users affected by moderation decisions may contact the Service Provider at ilkaynarli@gmail.com to request further review. The Service Provider will respond to appeals within a reasonable period and provide the reasons for any upheld moderation decision, subject to applicable law.
+The Service Provider may review reported content, request additional information where necessary, remove or restrict access to content, and take action against the responsible account where appropriate. Users affected by moderation decisions may contact the Service Provider at support@inarli.com to request further review. The Service Provider will respond to appeals within a reasonable period and provide the reasons for any upheld moderation decision, subject to applicable law.
 
 By submitting User-Generated Content you grant the Service Provider a non-exclusive, worldwide, royalty-free license to use, reproduce, distribute, prepare derivative works of, display and perform the content in connection with the Application and the Service Provider's business. This license does not grant the Service Provider the right to sell or sublicense your content to third parties independently of the Application. You represent and warrant that you own or control all rights in the content you post and that use of the content does not violate these Terms or applicable law.
 
@@ -106,7 +106,7 @@ Any dispute arising out of or relating to these Terms will be brought before the
 
 If the Application is an intermediary service as defined under the Digital Services Act (Regulation (EU) 2022/2065, "DSA"), the following provisions apply in addition to the terms above.
 
-**Point of Contact:** The Service Provider maintains a single point of contact for direct communication with EU authorities and recipients of the service, reachable at ilkaynarli@gmail.com. Where the Service Provider is established outside the European Union, a legal representative in the EU has been designated in accordance with Article 13 of the DSA.
+**Point of Contact:** The Service Provider maintains a single point of contact for direct communication with EU authorities and recipients of the service, reachable at support@inarli.com. Where the Service Provider is established outside the European Union, a legal representative in the EU has been designated in accordance with Article 13 of the DSA.
 
 **Content Moderation and Statement of Reasons:** When the Service Provider restricts access to content, suspends or terminates an account, or otherwise limits the availability of the Application's features, a clear and specific statement of reasons will be provided to the affected user. The statement will include the nature of the restriction, the legal or contractual basis for the decision, and information on available redress mechanisms, in accordance with Article 17 of the DSA.
 
@@ -114,7 +114,7 @@ If the Application is an intermediary service as defined under the Digital Servi
 
 **Out-of-Court Dispute Settlement:** Disputes regarding content moderation decisions, including decisions to restrict content or suspend accounts, may be submitted to an out-of-court dispute settlement body certified in accordance with Article 21 of the DSA. The Service Provider will engage with such bodies in good faith. Use of out-of-court dispute settlement does not affect your right to seek judicial remedy under applicable law.
 
-**Transparency Reporting:** The Service Provider publishes periodic transparency reports covering content moderation activities, including the volume of notices received, actions taken, and automated means used, in accordance with Article 24 of the DSA. Reports are made available upon request at ilkaynarli@gmail.com.
+**Transparency Reporting:** The Service Provider publishes periodic transparency reports covering content moderation activities, including the volume of notices received, actions taken, and automated means used, in accordance with Article 24 of the DSA. Reports are made available upon request at support@inarli.com.
 
 These DSA provisions apply to the extent that the Application qualifies as an intermediary service under the DSA and does not replace or limit any rights or obligations under applicable consumer protection or data protection law.
 
@@ -130,10 +130,10 @@ These Terms and Conditions, together with the Privacy Policy, constitute the ent
 
 The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.
 
-Previous versions of these Terms and Conditions will be maintained and made available upon request by contacting the Service Provider at ilkaynarli@gmail.com.
+Previous versions of these Terms and Conditions will be maintained and made available upon request by contacting the Service Provider at support@inarli.com.
 
 These terms and conditions are effective as of 2026-06-24
 
 **Contact Us**
 
-If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at ilkaynarli@gmail.com.
+If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at support@inarli.com.
