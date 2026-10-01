@@ -10,7 +10,7 @@ permalink: /taskroulette/
 <title>Task Roulette: Çevir, rulet karar versin | Spin to pick your next task</title>
 <meta name="description" content="Task Roulette: hangi işe başlayacağına karar veremediğinde çarkı çevir, rulet senin yerine seçsin. Konfeti, widget ve temalarıyla iOS görev uygulaması.">
 <link rel="canonical" href="https://www.inarli.com/taskroulette/">
-<meta name="theme-color" content="#5848E8">
+<meta name="theme-color" content="#2A1042">
 <meta name="apple-itunes-app" content="app-id=6783888710">
 <meta property="og:title" content="Task Roulette: Spin the wheel, beat procrastination">
 <meta property="og:description" content="Can't decide which task to start? Spin the wheel and let it decide. iOS task app with confetti, widget and themes.">
@@ -28,6 +28,9 @@ permalink: /taskroulette/
 <meta name="twitter:title" content="Task Roulette: Spin the wheel, beat procrastination">
 <meta name="twitter:description" content="Can't decide which task to start? Spin the wheel and let it decide. iOS task app with confetti, widget and themes.">
 <meta name="twitter:image" content="https://www.inarli.com/assets/img/taskroulette-og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="/assets/img/taskroulette-icon.svg">
 <link rel="apple-touch-icon" href="/assets/img/taskroulette-touch-icon.png">
@@ -64,7 +67,7 @@ permalink: /taskroulette/
     {
       "@type": "Question",
       "name": "Task Roulette ücretsiz mi?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Evet, temel özellikler ücretsiz. Ekstra temalar gibi bazı özellikler Pro sürümde." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Evet, ücretsiz sürüm aynı anda 10 göreve kadar tutar. Pro tek seferlik bir satın almadır, abonelik değildir: görev sınırını kaldırır ve tüm temaları açar." }
     },
     {
       "@type": "Question",
@@ -74,7 +77,7 @@ permalink: /taskroulette/
     {
       "@type": "Question",
       "name": "Verilerim nerede saklanıyor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Görevlerin cihazında saklanır. Ayrıntılar için gizlilik politikasına bakabilirsin: https://www.inarli.com/task-roulette-gizlilik/" }
+      "acceptedAnswer": { "@type": "Answer", "text": "Görevlerin cihazında saklanır, sunucuda değil. Telefonundan çıkan tek şey, not taramasında zorluk tahminini kendin açtığında gönderilen görev metnidir; bu özellik varsayılan olarak kapalıdır. Ayrıntılar: https://www.inarli.com/task-roulette-gizlilik/" }
     },
     {
       "@type": "Question",
@@ -86,22 +89,38 @@ permalink: /taskroulette/
 </script>
 <style>
   :root {
-    --purple-1: #7C6FFF;
-    --purple-2: #3D2FC4;
-    --accent: #5848E8;
-    --ink: #1d1a33;
-    --muted: #6b6885;
-    --bg: #f7f6fd;
+    /* Uygulamanin Midnight temasindan birebir alindi (Models/Task.swift) */
+    --plum-deep: #190A2C;   /* stageDeep */
+    --plum:      #2A1042;   /* stageMid + ink */
+    --plum-glow: #4A1D6E;   /* stageGlow */
+    --pink:      #FF4FA3;   /* accent */
+    --pink-lip:  #C2306F;   /* accentLip */
+    --gold:      #FFC53D;   /* token */
+    --gold-lip:  #C98A0E;
+    --mint:      #4BE1C4;   /* fresh */
+    --mint-lip:  #23A88F;
+
+    --ink: #2A1042;
+    --muted: #6E6484;
+    --cream: #FFF6EA;
+    --cream-2: #FFE1E8;
     --card: #ffffff;
-    --radius: 20px;
+    --radius: 22px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
     color: var(--ink);
-    background: var(--bg);
+    background: linear-gradient(170deg, var(--cream) 0%, var(--cream-2) 100%) fixed;
+    min-height: 100vh;
     line-height: 1.6;
+  }
+  h1, h2, h3, .brand, .wheel-center, .step .num {
+    font-family: "Fredoka", "Nunito", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
   /* Dil gizleme: sadece aktif olmayan dili sakla, !important ile her specificity'yi ez */
   html[data-active-lang="tr"] [data-lang="en"],
@@ -113,21 +132,21 @@ permalink: /taskroulette/
   /* Header */
   header {
     position: sticky; top: 0; z-index: 10;
-    background: rgba(247,246,253,0.85);
+    background: rgba(255,246,234,0.82);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(42,16,66,0.07);
   }
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
   .brand-icon { width: 34px; height: 34px; border-radius: 9px; display: block; }
   .lang-toggle {
-    display: flex; gap: 2px; background: #e9e7f7; border-radius: 999px; padding: 3px;
+    display: flex; gap: 2px; background: rgba(42,16,66,0.07); border-radius: 999px; padding: 3px;
   }
   .lang-toggle button {
     border: 0; background: transparent; padding: 5px 14px; border-radius: 999px;
     font-size: 0.85rem; font-weight: 600; color: var(--muted); cursor: pointer;
   }
-  .lang-toggle button.active { background: #fff; color: var(--accent); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .lang-toggle button.active { background: #fff; color: var(--pink-lip); box-shadow: 0 1px 4px rgba(42,16,66,0.14); }
 
   /* Hero */
   .hero {
@@ -135,7 +154,7 @@ permalink: /taskroulette/
     align-items: center; padding: 72px 0 88px;
   }
   .hero h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.15; letter-spacing: -0.02em; }
-  .hero h1 span { background: linear-gradient(135deg, var(--purple-1), var(--purple-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero h1 span { background: linear-gradient(135deg, var(--pink), var(--pink-lip)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero p.lead { margin: 18px 0 30px; font-size: 1.15rem; color: var(--muted); max-width: 34em; }
   .cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .appstore-badge { display: inline-block; transition: transform 0.15s ease; line-height: 0; }
@@ -147,8 +166,8 @@ permalink: /taskroulette/
   .phone {
     justify-self: center;
     width: 270px; height: 550px; border-radius: 44px;
-    background: linear-gradient(160deg, var(--purple-1), var(--purple-2));
-    box-shadow: 0 30px 80px rgba(61,47,196,0.35), inset 0 0 0 10px rgba(255,255,255,0.08);
+    background: radial-gradient(120% 85% at 50% 8%, var(--plum-glow) 0%, var(--plum) 45%, var(--plum-deep) 100%);
+    box-shadow: 0 30px 80px rgba(25,10,44,0.42), inset 0 0 0 10px rgba(255,255,255,0.07);
     position: relative; overflow: hidden;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
   }
@@ -159,8 +178,8 @@ permalink: /taskroulette/
   .wheel { width: 190px; height: 190px; position: relative; }
   .wheel-disc {
     width: 100%; height: 100%; border-radius: 50%;
-    background: conic-gradient(#ffffff 0 60deg, #d9d4ff 60deg 120deg, #ffffff 120deg 180deg, #d9d4ff 180deg 240deg, #ffffff 240deg 300deg, #d9d4ff 300deg 360deg);
-    box-shadow: 0 0 0 8px rgba(255,255,255,0.25), 0 12px 32px rgba(0,0,0,0.25);
+    background: conic-gradient(var(--pink) 0 60deg, #FFF6EA 60deg 120deg, var(--gold) 120deg 180deg, #FFF6EA 180deg 240deg, var(--mint) 240deg 300deg, #FFF6EA 300deg 360deg);
+    box-shadow: 0 0 0 8px rgba(255,246,234,0.22), 0 12px 32px rgba(0,0,0,0.3);
     animation: spin 7s cubic-bezier(0.2, 0.8, 0.3, 1) infinite;
   }
   @keyframes spin {
@@ -171,7 +190,7 @@ permalink: /taskroulette/
   .wheel-center {
     position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
     background: #fff; display: grid; place-items: center;
-    color: var(--accent); font-size: 1.5rem; font-weight: 800;
+    color: var(--pink-lip); font-size: 1.5rem; font-weight: 700;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
   .wheel-pointer {
@@ -192,15 +211,18 @@ permalink: /taskroulette/
   .section-title { font-size: clamp(1.5rem, 3vw, 2rem); text-align: center; letter-spacing: -0.01em; }
   .section-sub { text-align: center; color: var(--muted); margin: 10px auto 44px; max-width: 40em; }
 
-  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
   .feature {
     background: var(--card); border-radius: var(--radius); padding: 26px;
-    box-shadow: 0 2px 12px rgba(29,26,51,0.06);
+    box-shadow: 0 2px 14px rgba(42,16,66,0.07);
+    border: 1px solid rgba(42,16,66,0.05);
   }
   .feature .emoji {
     width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center;
-    font-size: 1.4rem; background: linear-gradient(135deg, #efeaff, #e2ddff); margin-bottom: 14px;
+    font-size: 1.4rem; background: linear-gradient(135deg, #FFE3F0, #FFD2E6); margin-bottom: 14px;
   }
+  .feature:nth-child(3n+2) .emoji { background: linear-gradient(135deg, #FFF0CC, #FFE3A3); }
+  .feature:nth-child(3n) .emoji   { background: linear-gradient(135deg, #D9F8F0, #BFF2E6); }
   .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
   .feature p { font-size: 0.92rem; color: var(--muted); }
 
@@ -209,8 +231,8 @@ permalink: /taskroulette/
   .step { text-align: center; padding: 10px 16px; }
   .step .num {
     width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 14px;
-    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
-    color: #fff; font-weight: 800; font-size: 1.1rem; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--pink), var(--pink-lip));
+    color: #fff; font-weight: 700; font-size: 1.1rem; display: grid; place-items: center;
   }
   .step h3 { font-size: 1rem; margin-bottom: 6px; }
   .step p { font-size: 0.92rem; color: var(--muted); }
@@ -218,28 +240,29 @@ permalink: /taskroulette/
   /* FAQ */
   .faq { max-width: 720px; margin: 0 auto; }
   details {
-    background: var(--card); border-radius: 14px; padding: 18px 22px; margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(29,26,51,0.05);
+    background: var(--card); border-radius: 16px; padding: 18px 22px; margin-bottom: 12px;
+    box-shadow: 0 2px 10px rgba(42,16,66,0.06);
+    border: 1px solid rgba(42,16,66,0.05);
   }
   details summary { font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   details summary::-webkit-details-marker { display: none; }
-  details summary::after { content: "+"; font-size: 1.3rem; color: var(--accent); flex-shrink: 0; }
+  details summary::after { content: "+"; font-size: 1.3rem; color: var(--pink); flex-shrink: 0; }
   details[open] summary::after { content: "−"; }
   details p { margin-top: 10px; color: var(--muted); font-size: 0.95rem; }
 
   /* Bottom CTA */
   .bottom-cta {
-    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
-    border-radius: 28px; text-align: center; padding: 56px 32px; color: #fff; margin-bottom: 64px;
+    background: radial-gradient(120% 140% at 50% 0%, var(--plum-glow) 0%, var(--plum) 50%, var(--plum-deep) 100%);
+    border-radius: 28px; text-align: center; padding: 56px 32px; color: #FFF6EC; margin-bottom: 64px;
   }
   .bottom-cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; }
   .bottom-cta p { opacity: 0.85; margin-bottom: 26px; }
   .bottom-cta .appstore-badge svg { height: 58px; }
 
-  footer { border-top: 1px solid rgba(0,0,0,0.07); padding: 28px 0 40px; font-size: 0.85rem; color: var(--muted); }
+  footer { border-top: 1px solid rgba(42,16,66,0.08); padding: 28px 0 40px; font-size: 0.85rem; color: var(--muted); }
   .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-joke { margin-top: 14px; text-align: center; font-size: 0.8rem; color: var(--muted); }
-  footer a { color: var(--accent); text-decoration: none; }
+  footer a { color: var(--pink-lip); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
   @media (max-width: 800px) {
@@ -298,8 +321,8 @@ permalink: /taskroulette/
             <text x="52" y="43" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="600">App Store</text>
           </svg>
         </a>
-        <span class="free-note" data-lang="tr">Ücretsiz • iPhone için</span>
-        <span class="free-note" data-lang="en">Free • for iPhone</span>
+        <span class="free-note" data-lang="tr">Ücretsiz • iPhone ve iPad</span>
+        <span class="free-note" data-lang="en">Free • iPhone and iPad</span>
       </div>
     </div>
 
@@ -331,6 +354,13 @@ permalink: /taskroulette/
         <p data-lang="en">Offload the decision to the wheel. A slot-style spin picks your next task, you just start.</p>
       </div>
       <div class="feature">
+        <div class="emoji">📷</div>
+        <h3 data-lang="tr">Not defterini tara</h3>
+        <h3 data-lang="en">Scan your notebook</h3>
+        <p data-lang="tr">Kâğıda yazdığın notları fotoğrafla; metin cihazında okunur, görevler listene düşer. İstersen zorluk seviyelerini yapay zekâ tahmin eder — bu seçim her taramada senindir ve varsayılan olarak kapalıdır.</p>
+        <p data-lang="en">Snap a photo of your handwritten notes; the text is read on your device and the tasks land in your list. You can let AI estimate the difficulty levels — the choice is yours on every scan, and it is off by default.</p>
+      </div>
+      <div class="feature">
         <div class="emoji">⚡️</div>
         <h3 data-lang="tr">Zorluk seviyeleri</h3>
         <h3 data-lang="en">Difficulty levels</h3>
@@ -357,6 +387,13 @@ permalink: /taskroulette/
         <h3 data-lang="en">Themes</h3>
         <p data-lang="tr">Midnight, Sunset, Forest ve Ocean temalarıyla çarkını kişiselleştir.</p>
         <p data-lang="en">Make it yours with Midnight, Sunset, Forest and Ocean themes.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🔓</div>
+        <h3 data-lang="tr">Tek seferlik ödeme</h3>
+        <h3 data-lang="en">One-time purchase</h3>
+        <p data-lang="tr">Ücretsiz sürüm 10 görev tutar. Pro abonelik değil: bir kez öde, görev sınırı kalksın ve tüm temalar açılsın.</p>
+        <p data-lang="en">The free version holds 10 tasks. Pro is not a subscription: pay once, the limit goes away and every theme unlocks.</p>
       </div>
       <div class="feature">
         <div class="emoji">🌍</div>
@@ -410,18 +447,18 @@ permalink: /taskroulette/
     <div class="faq">
       <details open>
         <summary><span data-lang="tr">Task Roulette ücretsiz mi?</span><span data-lang="en">Is Task Roulette free?</span></summary>
-        <p data-lang="tr">Evet, temel özellikler ücretsiz. Ekstra temalar ve sınırsız görev ekleme gibi bazı özellikler Pro sürümde.</p>
-        <p data-lang="en">Yes, the core features are free. Some extras like additional themes and adding more than 10 tasks are part of Pro.</p>
+        <p data-lang="tr">Evet, ücretsiz sürüm aynı anda 10 göreve kadar tutar. Pro tek seferlik bir satın alma — abonelik değil — görev sınırını kaldırır ve tüm temaları açar.</p>
+        <p data-lang="en">Yes, the free version holds up to 10 tasks at a time. Pro is a one-time purchase — not a subscription — that removes the limit and unlocks every theme.</p>
       </details>
       <details open>
         <summary><span data-lang="tr">Hangi cihazlarda çalışır?</span><span data-lang="en">Which devices does it support?</span></summary>
-        <p data-lang="tr">iPhone için tasarlandı; ana ekran widget'ı da dahil.</p>
-        <p data-lang="en">Designed for iPhone, home screen widget included.</p>
+        <p data-lang="tr">iPhone ve iPad'de çalışır; ana ekran widget'ı da dahil.</p>
+        <p data-lang="en">Works on iPhone and iPad, home screen widget included.</p>
       </details>
       <details open>
         <summary><span data-lang="tr">Verilerim nerede saklanıyor?</span><span data-lang="en">Where is my data stored?</span></summary>
-        <p data-lang="tr">Görevlerin cihazında saklanır. Ayrıntılar için <a href="/task-roulette-gizlilik/">gizlilik politikasına</a> bakabilirsin.</p>
-        <p data-lang="en">Your tasks live on your device. See the <a href="/task-roulette-privacy/">privacy policy</a> for details.</p>
+        <p data-lang="tr">Görevlerin cihazında saklanır, sunucuda değil. Telefonundan çıkan tek şey, not taramasında zorluk tahminini kendin açtığında gönderilen görev metnidir; bu özellik varsayılan olarak kapalıdır. Ayrıntılar için <a href="/task-roulette-gizlilik/">gizlilik politikasına</a> bakabilirsin.</p>
+        <p data-lang="en">Your tasks live on your device, not on a server. The only thing that ever leaves your phone is the task text from a scan where you switch difficulty estimation on yourself — off by default. See the <a href="/task-roulette-privacy/">privacy policy</a> for details.</p>
       </details>
       <details open>
         <summary><span data-lang="tr">Neden rastgele seçim işe yarıyor?</span><span data-lang="en">Why does random picking work?</span></summary>
