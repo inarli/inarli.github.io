@@ -20,7 +20,7 @@ permalink: /taskroulette/
 <meta property="og:image" content="https://www.inarli.com/assets/img/taskroulette-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Task Roulette: spin the wheel to pick your next task">
+<meta property="og:image:alt" content="Task Roulette: let the app pick your next task">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,7 +32,8 @@ permalink: /taskroulette/
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/assets/img/taskroulette-icon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/taskroulette-icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/img/taskroulette-icon-512.png">
 <link rel="apple-touch-icon" href="/assets/img/taskroulette-touch-icon.png">
 <script type="application/ld+json">
 {
@@ -117,7 +118,7 @@ permalink: /taskroulette/
     min-height: 100vh;
     line-height: 1.6;
   }
-  h1, h2, h3, .brand, .wheel-center, .step .num {
+  h1, h2, h3, .brand, .step .num {
     font-family: "Fredoka", "Nunito", sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -162,7 +163,7 @@ permalink: /taskroulette/
   .appstore-badge svg { height: 54px; width: auto; }
   .free-note { font-size: 0.85rem; color: var(--muted); }
 
-  /* Phone mockup with wheel */
+  /* Telefon maketi — gercek uygulama ekrani */
   .phone {
     justify-self: center;
     width: 270px; height: 550px; border-radius: 44px;
@@ -175,28 +176,50 @@ permalink: /taskroulette/
     content: ""; position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
     width: 90px; height: 24px; background: rgba(0,0,0,0.35); border-radius: 999px;
   }
-  .wheel { width: 190px; height: 190px; position: relative; }
-  .wheel-disc {
-    width: 100%; height: 100%; border-radius: 50%;
-    background: conic-gradient(var(--pink) 0 60deg, #FFF6EA 60deg 120deg, var(--gold) 120deg 180deg, #FFF6EA 180deg 240deg, var(--mint) 240deg 300deg, #FFF6EA 300deg 360deg);
-    box-shadow: 0 0 0 8px rgba(255,246,234,0.22), 0 12px 32px rgba(0,0,0,0.3);
-    animation: spin 7s cubic-bezier(0.2, 0.8, 0.3, 1) infinite;
+  /* Slot panel — uygulamadaki SlotAnimationView'in davranisi:
+     gorev basliklari gecer, yavaslar, sonucta kilitlenir ve altin bir
+     parilti ile durur (~1.8 sn). Donen bir cark YOK. */
+  .slot-card {
+    width: 210px; background: #fff; border-radius: 20px; padding: 18px 16px 16px;
+    border-bottom: 5px solid #E6D9CC; text-align: center;
   }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    55% { transform: rotate(1470deg); }
-    100% { transform: rotate(1470deg); }
+  .slot-label {
+    font-size: 0.62rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    color: #9A8FA8; margin-bottom: 10px;
   }
-  .wheel-center {
-    position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
-    background: #fff; display: grid; place-items: center;
-    color: var(--pink-lip); font-size: 1.5rem; font-weight: 700;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  .slot { position: relative; height: 56px; }
+  .slot span {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 0.98rem; line-height: 1.2;
+    color: var(--ink); opacity: 0; padding: 0 4px;
   }
-  .wheel-pointer {
-    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-    width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent;
-    border-top: 18px solid #fff; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+  .slot span.f { animation: slotFlash 5s infinite; }
+  .slot span.f:nth-of-type(1) { animation-delay: 0s; }
+  .slot span.f:nth-of-type(2) { animation-delay: .22s; }
+  .slot span.f:nth-of-type(3) { animation-delay: .48s; }
+  .slot span.f:nth-of-type(4) { animation-delay: .80s; }
+  .slot span.f:nth-of-type(5) { animation-delay: 1.18s; }
+  .slot span.f:nth-of-type(6) { animation-delay: 1.62s; }
+  .slot span.landed { animation: slotLand 5s infinite; }
+  @keyframes slotFlash {
+    0%, 100% { opacity: 0; }
+    1%, 4%   { opacity: 1; }
+    5%       { opacity: 0; }
+  }
+  @keyframes slotLand {
+    0%, 39%  { opacity: 0; transform: scale(.96); text-shadow: none; }
+    42%      { opacity: 1; transform: scale(1.06); text-shadow: 0 0 16px rgba(255,197,61,.85); }
+    47%, 90% { opacity: 1; transform: scale(1); text-shadow: 0 0 10px rgba(255,197,61,.35); }
+    96%,100% { opacity: 0; transform: scale(1); text-shadow: none; }
+  }
+  .slot-pips { display: flex; gap: 5px; justify-content: center; margin-top: 10px; }
+  .slot-pips i { width: 7px; height: 7px; border-radius: 50%; background: rgba(42,16,66,.14); }
+  .slot-pips i:nth-child(-n+3) { background: var(--token, #FFC53D); }
+  .spin-btn {
+    margin-top: 4px; width: 210px; padding: 13px 0; border-radius: 16px;
+    background: var(--pink); color: #fff; font-family: "Fredoka", sans-serif;
+    font-weight: 600; font-size: 0.95rem; text-align: center;
+    border-bottom: 5px solid var(--pink-lip);
   }
   .phone-task {
     background: rgba(255,255,255,0.16); border-radius: 14px; padding: 10px 18px;
@@ -279,7 +302,7 @@ permalink: /taskroulette/
 <header>
   <div class="wrap nav">
     <a class="brand" href="#">
-      <img class="brand-icon" src="/assets/img/taskroulette-icon.svg" alt="Task Roulette logosu" width="34" height="34">
+      <img class="brand-icon" src="/assets/img/taskroulette-icon-192.png" alt="Task Roulette logosu" width="34" height="34">
       Task Roulette
     </a>
     <div class="lang-toggle" role="group" aria-label="Language">
@@ -327,14 +350,34 @@ permalink: /taskroulette/
     </div>
 
     <div class="phone" aria-hidden="true">
-      <div class="wheel">
-        <div class="wheel-pointer"></div>
-        <div class="wheel-disc"></div>
-        <div class="wheel-center">✓</div>
+      <div class="slot-card" data-lang="tr">
+        <div class="slot-label">Aktif Görev</div>
+        <div class="slot">
+          <span class="f">Çöpü dışarı çıkar</span>
+          <span class="f">Bitkileri sula</span>
+          <span class="f">Faturaları gözden geçir</span>
+          <span class="f">Kısa bir yürüyüşe çık</span>
+          <span class="f">Bulaşık makinesini boşalt</span>
+          <span class="f">Yarınki kıyafetini hazırla</span>
+          <span class="landed">Haftalık market listesini hazırla</span>
+        </div>
+        <div class="slot-pips"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
-      <div class="phone-task" data-lang="tr">🎉 Sıradaki: Raporu bitir</div>
-      <div class="phone-task" data-lang="en">🎉 Up next: Finish the report</div>
-      <div class="phone-dots"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="slot-card" data-lang="en">
+        <div class="slot-label">Active task</div>
+        <div class="slot">
+          <span class="f">Take out the trash</span>
+          <span class="f">Water the plants</span>
+          <span class="f">Review the invoices</span>
+          <span class="f">Go for a short walk</span>
+          <span class="f">Empty the dishwasher</span>
+          <span class="f">Pick tomorrow's outfit</span>
+          <span class="landed">Weekly grocery shopping list</span>
+        </div>
+        <div class="slot-pips"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="spin-btn" data-lang="tr">✳ Çevir</div>
+      <div class="spin-btn" data-lang="en">✳ Spin</div>
     </div>
   </div>
 

@@ -24,6 +24,10 @@
 		}
 	}
 	.about-me { font-size: 16px; line-height: 26px; margin: 30px 0 0; }
+	.my-app { margin: 18px 0 0; font-size: 15px; }
+	.my-app a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+	.my-app a:hover { text-decoration: underline; }
+	.my-app img { border-radius: 5px; display: block; }
 	.socials { @include flexbox(); @include justify-content(); margin: 25px 0 0;
 		li { margin: 5px;
 			a { @include flexbox(); @include align-items(); @include justify-content(); width: 40px; height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%; @include transition(all .1s ease);
