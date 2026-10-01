@@ -9,14 +9,13 @@ description: "Task Roulette gizlilik politikası: uygulamanın cihazında saklad
 
 Bu gizlilik politikası, mobil cihazlar için Task Roulette uygulaması ve İlkay Narlı tarafından işletilen ilgili hizmetler (topluca "Uygulama") için geçerlidir. İlkay Narlı bundan sonra "Hizmet Sağlayıcı" olarak anılacaktır.
 
-**Bilgi Toplama ve Kullanım**
+**Uygulama Hangi Verileri Topluyor**
 
-Uygulama, siz indirip kullandığınızda bilgi toplar. Bu bilgiler şunları içerebilir:
+Uygulama analiz (analytics) ya da kullanım istatistiği toplamaz. İçinde hiçbir reklam, analiz veya izleme SDK'sı yoktur ve reklam kimliği kullanmaz. IP adresinizi, hangi ekranları açtığınızı, ne kadar süre kullandığınızı, cihaz modelinizi veya işletim sistemi sürümünüzü kaydetmez.
 
-*   Cihazınızın İnternet Protokolü (IP) adresi
-*   Uygulamanın ziyaret ettiğiniz sayfaları, ziyaretinizin tarihi ve saati, bu sayfalarda geçirdiğiniz süre
-*   Uygulamada geçirdiğiniz süre
-*   Kullandığınız mobil işletim sistemi
+Görevleriniz, zorluk seviyeleri, tema ve dil tercihleriniz yalnızca cihazınızda saklanır. Hiçbir sunucuya gönderilmez ve Hizmet Sağlayıcı bunları göremez.
+
+Cihazınızdan çıkan tek veri bir sonraki bölümde anlatılıyor ve yalnızca o özelliği kendiniz açarsanız gönderilir.
 
 **Not Tarama ve Yapay Zekâ ile Zorluk Tahmini**
 
@@ -30,7 +29,7 @@ Hizmet Sağlayıcı bu metni saklamaz ve kaydetmez. Model sağlayıcı, kendi hi
 
 **Çerezler ve izleme teknolojileri**
 
-Uygulama veya üçüncü taraf SDK'ları; işlevsellik, analiz veya hizmet sunumunu desteklemek amacıyla çerezler, SDK'lar, pikseller ve benzeri teknolojiler kullanabilir. İlgili mevzuatın gerektirdiği hâllerde, Hizmet Sağlayıcı zorunlu olmayan izleme teknolojilerini kullanmadan önce onayınızı alacaktır.
+Uygulama çerez, piksel, reklam kimliği veya üçüncü taraf SDK kullanmaz. Vazgeçilecek bir şey yoktur, çünkü hiçbir izleme yapılmamaktadır.
 
 **Haklarınız**
 
@@ -38,15 +37,17 @@ Hizmet Sağlayıcı'nın elinde bulunan kişisel verilerinize erişim, bunların
 
 **Kaliforniya gizlilik haklarınız (CCPA/CPRA)**
 
-Kaliforniya'da ikamet ediyorsanız; hangi kişisel bilgilerin toplandığını öğrenme, kişisel bilgilerin silinmesini isteme, kişisel bilgilerin satışından veya paylaşılmasından vazgeçme ve bu hakları kullandığınız için ayrımcılığa uğramama haklarına sahipsiniz. CCPA/CPRA haklarınızı kullanmak için Hizmet Sağlayıcı ile support@inarli.com adresinden iletişime geçin.
+Kaliforniya'da ikamet ediyorsanız; hangi kişisel bilgilerin toplandığını öğrenme, kişisel bilgilerin silinmesini isteme, kişisel bilgilerin satışından veya paylaşılmasından vazgeçme ve bu hakları kullandığınız için ayrımcılığa uğramama haklarına sahipsiniz. Hizmet Sağlayıcı kişisel bilgi satmaz ve paylaşmaz. CCPA/CPRA haklarınızı kullanmak için support@inarli.com adresinden iletişime geçin.
 
-Hizmet Sağlayıcı, sağladığınız bilgileri önemli bilgilendirmeler, zorunlu bildirimler ve hukuken izin verilen hâllerde pazarlama iletileri göndermek için kullanabilir.
-
-Uygulamayı kullanırken daha iyi bir deneyim sunabilmek için Hizmet Sağlayıcı sizden kimliğinizi belirleyebilecek bazı bilgiler isteyebilir. Talep edilen bilgiler bu gizlilik politikasında açıklandığı şekilde saklanacak ve kullanılacaktır.
+Uygulamada hesap kavramı yoktur; çalışması için sizden ad, e-posta adresi veya kimliğinizi belirleyen başka bir bilgi istenmez.
 
 **Üçüncü Taraf Erişimi**
 
-Hizmet Sağlayıcı'nın Uygulamayı ve hizmetini geliştirmesine yardımcı olmak üzere, toplulaştırılmış ve anonimleştirilmiş veriler düzenli aralıklarla harici hizmetlere aktarılabilir. Ayrıca, yukarıda "Not Tarama ve Yapay Zekâ ile Zorluk Tahmini" başlığı altında açıklanan isteğe bağlı özelliği açmanız hâlinde, okunan görev metni yalnızca bu amaçla Hizmet Sağlayıcı'nın veri işleyenlerine aktarılır. Hizmet Sağlayıcı, bilgilerinizi bu gizlilik bildiriminde açıklanan şekillerde üçüncü taraflarla paylaşabilir.
+Hizmet Sağlayıcı verilerinizi reklam, analiz veya herhangi bir ticari amaçla üçüncü taraflarla paylaşmaz ve satmaz.
+
+İsteğe bağlı zorluk tahmini özelliğinde, yalnızca o özellik açıkken iki hizmet sağlayıcı devreye girer: isteğin gönderildiği uç noktayı barındıran Cloudflare, Inc. ve metni işleyen dil modelini sağlayan Anthropic PBC. Bu taraflara yalnızca okunan görev metni ulaşır, başka hiçbir şey ulaşmaz.
+
+Hizmet Sağlayıcı, mahkeme celbi veya benzeri hukuki süreçlere uyum gibi kanunen gerekli hâllerde ya da haklarını veya bir kişinin güvenliğini korumak için iyi niyetle gerekli gördüğü hâllerde bilgi açıklayabilir.
 
 **Uluslararası Veri Aktarımları**
 
@@ -58,28 +59,19 @@ Hizmet Sağlayıcı veya üçüncü taraf hizmet sağlayıcıları, kişisel ver
 
 Diğer ülkelerdeki veri koruma mevzuatı kendi ülkenizdekinden farklı olabilir. Mevzuatın gerektirdiği hâllerde Hizmet Sağlayıcı uygun güvenceleri uygulayacak ve aktarım için gereken onayı alacaktır.
 
-Hizmet Sağlayıcı, Kullanıcı Tarafından Sağlanan ve Otomatik Olarak Toplanan Bilgileri şu hâllerde açıklayabilir:
-
-*   Mahkeme celbi veya benzeri hukuki süreçlere uyum gibi, kanunen gerekli olduğunda;
-*   Haklarını korumak, sizin veya başkalarının güvenliğini korumak, dolandırıcılığı soruşturmak ya da bir devlet talebine yanıt vermek için açıklamanın gerekli olduğuna iyi niyetle inandığında;
-*   Kendisi adına çalışan, açıklanan bilgiler üzerinde bağımsız bir kullanım hakkı bulunmayan ve bu gizlilik bildiriminde belirtilen kurallara uymayı kabul etmiş güvenilir hizmet sağlayıcılarıyla.
-
 **Vazgeçme (Opt-Out) Hakları**
 
-Uygulamayı kaldırarak mobil cihazınızdan bilgi toplanmasını durdurabilirsiniz. Kaldırma işlemi, Uygulamanın cihazınızdan veri toplamasını durdurur; ancak daha önce Hizmet Sağlayıcı'ya veya üçüncü taraflara aktarılmış bilgileri otomatik olarak silmez.
+Zorluk tahmini özelliğini istediğiniz zaman Ayarlar → Yapay Zekâ'dan kapatabilirsiniz; kapattığınızda cihazınızdan hiçbir şey çıkmaz. Uygulamayı silmek, cihazınızda tutulan görevleri ve ayarları kaldırır.
 
-Kişisel verilerinizin silinmesini talep etmek, onayınızı geri çekmek veya haklarınızdan herhangi birini kullanmak için Hizmet Sağlayıcı ile support@inarli.com adresinden iletişime geçin.
+Haklarınızdan herhangi birini kullanmak için support@inarli.com adresinden iletişime geçin.
 
 **Veri Saklama Politikası**
 
-Hizmet Sağlayıcı, kişisel verileri belirtilen amaçlar için gerekli olduğu ölçüde saklar:
+Hizmet Sağlayıcı kendi sunucularında kişisel veri tutmaz, dolayısıyla saklayacağı bir şey yoktur.
 
-*   Kullanıcı Tarafından Sağlanan Veriler: Uygulamayı kullandığınız süre boyunca ve sonrasında 12 ay, daha uzun saklama kanunen gerekmedikçe
-*   Otomatik Olarak Toplanan Veriler: Toplanmasından itibaren 24 aya kadar, hukuki uyum için daha uzun saklama gerekmedikçe
-*   Toplulaştırılmış ve Anonimleştirilmiş Veriler: Artık sizi tanımlamadığı için süresiz
-*   Hukuki uyum için gereken veriler: İlgili mevzuatın gerektirdiği süre boyunca
-
-Kişisel verilerinizin silinmesini, saklamaya ilişkin hukuki bir yükümlülük bulunmadığı sürece talep edebilirsiniz. Uygulama aracılığıyla gönderilen Kullanıcı Tarafından Sağlanan Verilerin silinmesini istiyorsanız support@inarli.com adresinden iletişime geçin. Bazı Kullanıcı Tarafından Sağlanan Verilerin Uygulamanın düzgün çalışması için gerekli olabileceğini lütfen unutmayın.
+*   Görevler ve ayarlar: siz silene ya da uygulamayı kaldırana kadar cihazınızda kalır
+*   Zorluk tahmini için gönderilen görev metni: Hizmet Sağlayıcı tarafından kaydedilmez ve saklanmaz. Model sağlayıcı, kendi hizmet koşulları gereği girdileri kötüye kullanım denetimi amacıyla sınırlı bir süre tutabilir
+*   E-posta ile gönderdiğiniz yazışmalar: talebinizi karşılamak için gereken süre boyunca saklanır
 
 **Çocuklar**
 

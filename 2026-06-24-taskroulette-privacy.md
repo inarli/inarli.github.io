@@ -9,14 +9,13 @@ description: "Task Roulette privacy policy: what the app stores on your device, 
 
 This privacy policy applies to the Task Roulette app for mobile devices, together with any related services operated by İlkay Narlı (collectively, the "Application"). İlkay Narlı is hereby referred to as the "Service Provider".
 
-**Information Collection and Use**
+**What the Application Collects**
 
-The Application collects information when you download and use it. This information may include information such as
+The Application collects no analytics and no usage statistics. It contains no advertising, analytics or tracking SDKs of any kind, and it uses no advertising identifier. It does not record your IP address, which screens you open, how long you use it, your device model or your operating system version.
 
-*   Your device's Internet Protocol address
-*   The pages of the Application that you visit, the time and date of your visit, the time spent on those pages
-*   The time spent on the Application
-*   your mobile operating system you use
+Your tasks, difficulty levels, theme and language preferences are stored on your device only. They are not sent to any server and the Service Provider cannot see them.
+
+The only data that ever leaves your device is described in the next section, and only if you turn that feature on yourself.
 
 **Note Scanning and AI Difficulty Estimation**
 
@@ -30,7 +29,7 @@ You may turn the feature off at any time in Settings → AI → "Estimate Diffic
 
 **Cookies and tracking technologies**
 
-The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, or service delivery. Where required by applicable law, the Service Provider will obtain consent before using non-essential tracking technologies.
+The Application uses no cookies, no pixels, no advertising identifiers and no third-party SDKs. There is nothing to opt out of, because no tracking takes place.
 
 **Your Rights**
 
@@ -38,15 +37,17 @@ You may request access to, correction of, or deletion of your personal data held
 
 **Your California privacy rights (CCPA/CPRA)**
 
-If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. To exercise your CCPA/CPRA rights, contact the Service Provider at support@inarli.com.
+If you are a California resident, you have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information, and the right to non-discrimination for exercising these rights. The Service Provider does not sell or share personal information. To exercise your CCPA/CPRA rights, contact the Service Provider at support@inarli.com.
 
-The Service Provider may use the information you provide to send important information, required notices, and, where permitted by law, marketing communications.
-
-For a better experience while using the Application, the Service Provider may require you to provide certain personally identifiable information. The information the Service Provider requests will be retained and used as described in this privacy policy.
+The Application has no accounts and asks for no name, e-mail address or other identifying information in order to work.
 
 **Third Party Access**
 
-Aggregated, anonymized data may be periodically transmitted to external services to aid the Service Provider in improving the Application and their service. In addition, if you turn on the optional AI difficulty estimation feature described under "Note Scanning and AI Difficulty Estimation" above, the recognised task text is transmitted to the Service Provider's processors for that purpose only. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
+The Service Provider does not share your data with third parties for advertising, analytics or any commercial purpose, and does not sell it.
+
+Two service providers are involved in the optional difficulty estimation feature, and only while it is switched on: Cloudflare, Inc., which hosts the endpoint the request is sent to, and Anthropic PBC, which provides the language model that processes the text. They receive the recognised task text and nothing else.
+
+The Service Provider may disclose information where required by law, such as to comply with a subpoena or similar legal process, or where disclosure is necessary in good faith to protect its rights or someone's safety.
 
 **International Data Transfers**
 
@@ -58,28 +59,19 @@ The Service Provider or its third-party service providers may transfer personal 
 
 Data protection laws in other countries may differ from those in your jurisdiction. Where required by law, the Service Provider will apply appropriate safeguards and obtain any consent required for the transfer.
 
-The Service Provider may disclose User Provided and Automatically Collected Information:
-
-*   as required by law, such as to comply with a subpoena, or similar legal process;
-*   when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
-*   with their trusted services providers who work on their behalf, do not have an independent use of the information the Service Provider discloses to them, and have agreed to adhere to the rules set forth in this privacy statement.
-
 **Opt-Out Rights**
 
-You can stop further collection of information from your mobile device by uninstalling the Application. Uninstalling will stop the Application from collecting data from your device, but it does not automatically delete information that has already been transmitted to the Service Provider or to third parties.
+You can turn off the difficulty estimation feature at any time in Settings → AI, which stops anything leaving your device. Deleting the Application removes the tasks and settings held on your device.
 
-To request deletion of your personal data, to withdraw consent, or to exercise any of your rights, contact the Service Provider at support@inarli.com.
+To exercise any of your rights, contact the Service Provider at support@inarli.com.
 
 **Data Retention Policy**
 
-The Service Provider retains personal data based on its necessity for the stated purposes:
+The Service Provider holds no personal data on its own servers, so there is nothing for it to retain.
 
-*   User Provided Data: Retained for the duration of your use of the Application plus 12 months thereafter, unless longer retention is required by law
-*   Automatically Collected Data: Retained for up to 24 months from collection, unless longer retention is required for legal compliance
-*   Aggregated and Anonymized Data: Retained indefinitely as it no longer identifies you
-*   Data required for legal compliance: Retained as long as required by applicable law
-
-You may request deletion of your personal data, subject to any legal obligation to retain it. If you want the Service Provider to delete User Provided Data submitted through the Application, please contact them at support@inarli.com. Please note that some User Provided Data may be required for the Application to function properly.
+*   Tasks and settings: kept on your device until you delete them or uninstall the Application
+*   Task text sent for difficulty estimation: not recorded or stored by the Service Provider. The model provider may retain inputs for a limited period for abuse monitoring under its own terms of service
+*   Correspondence you send by e-mail: kept for as long as needed to deal with your request
 
 **Children**
 
